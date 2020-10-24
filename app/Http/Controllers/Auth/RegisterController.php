@@ -33,6 +33,6 @@ class RegisterController extends Controller
         $email = $request->input('email');
 
         $user->notify(new NewUser($email));
-        return redirect('/login')->with('success', trans('messages.registrationSuccessful'));
+        return redirect('/login')->with('success', trans('auth.registrationSuccessful'));
     }
 }
