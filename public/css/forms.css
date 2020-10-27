@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tangerine&display=swap');
+
+body {
+    background-color: #e9ecef;
+    font-family: 'Montserrat', sans-serif;
+    color: #505962;
+}
+.center {
+    margin-top: 20%;
+}
+.name {
+    font-family: 'Tangerine', cursive;
+    font-size: 3rem;
+    color: #800000;
+}
+.page-links {
+    color: #505962 !important;
+}
+.page-links:hover {
+    color: #090c11 !important;
+}

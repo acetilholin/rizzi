@@ -16,5 +16,15 @@ return [
     "tokenSent" => "Il token è stato inviato alla tua email",
     "tokenExpired" => "Il token è scaduto",
     "passwordChanged" => "Password cambiata",
-    "wrongToken" => "Token sbagliato"
+    "wrongToken" => "Token sbagliato",
+    "email" => "E-mail",
+    "pass" => "Password",
+    "register" => "Registrati",
+    "login" => "Accesso",
+    "fPass" => "Password dimenticata",
+    "send" => "Inviare",
+    "name" => "Nome",
+    "passMinLen" => "La lunghezza minima è di 6 caratteri",
+    "token" => "Token"
+
 ];

@@ -8,16 +8,16 @@
                 </div>
                 <form method="POST" action="{{ route('sendToken') }}">
                     <div class="form-group">
-                        <label for="email">E-mail</label>
+                        <label for="email">{{ trans('auth.email') }}</label>
                         <input type="email" class="form-control" id="email" name="email" placeholder="E-mail">
                     </div>
                     @csrf
                     @include('messages.login-register')
                     @yield('content')
                     <div class="text-center" style="padding-top: 10px;">
-                        &nbsp;<a href="{{ url('/login') }}" class="page-links" style="text-decoration: none">Accesso</a> | <a href="{{ url('/register') }}" class="page-links" style="text-decoration: none">Registrati</a>
+                        &nbsp;<a href="{{ url('/login') }}" class="page-links" style="text-decoration: none">{{ trans('auth.login') }}</a> | <a href="{{ url('/register') }}" class="page-links" style="text-decoration: none">{{ trans('auth.register') }}</a>
                     </div>
-                    <button type="submit" class="btn btn-custom remove-ml hvr-underline-from-center">Inviare</button>
+                    <button type="submit" class="btn btn-custom remove-ml hvr-underline-from-center">{{ trans('auth.send') }}</button>
                 </form>
             </div>
         </div>

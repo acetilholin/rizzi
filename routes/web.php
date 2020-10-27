@@ -25,4 +25,6 @@ Route::post('/send-token', ['as' => 'sendToken', 'uses' => 'Auth\ForgotPasswordC
 Route::post('/reset-password', ['as' => 'resetPassword', 'uses' => 'Auth\ResetPasswordController@reset']);
 
 /* middleware */
+Route::get('main', ['as' => 'main', 'uses' => 'OfferController@index']);
 Route::get('logout', ['as' => 'logout', 'uses' => 'Auth\LoginController@logout']);
+Route::get('/offers/{id}', ['as' => 'showOffer', 'uses' => 'OfferController@show']);

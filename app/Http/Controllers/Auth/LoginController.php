@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Auth;
 
 use App\Helpers\UserHelper;
 use App\Http\Controllers\Controller;
+use App\Offer;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
@@ -81,7 +82,10 @@ class LoginController extends Controller
                 $helper->lastSeen($email, $dateTime);
                 $helper->createLoginCookie($email);
 
-                return view('auth.main', []);
+                $offers = Offer::all();
+                return view('auth.main', [
+                    'offers' => $offers
+                ]);
             }
         }
     }

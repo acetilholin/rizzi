@@ -128,7 +128,6 @@ $(document).ready(function () {
     });
 
     $('[data-fancybox]').fancybox({
-        loop: false,
         gutter: 50,
         keyboard: true,
         preventCaptionOverlap: true,

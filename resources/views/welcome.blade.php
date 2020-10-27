@@ -193,7 +193,7 @@
                                 <div class="item">
                                     <img src="{{ asset('img/gallery/dine1.jpg') }}">
                                     <div class="icons">
-                                        <a href="{{ asset('img/gallery/dine1.jpg') }}" class="openButton" data-fancybox data-caption="Hotel">
+                                        <a href="{{ asset('img/gallery/dine1.jpg') }}" class="openButton" data-fancybox="images" data-caption="Hotel">
                                             <i class="fa fa-search"></i>
                                         </a>
                                     </div>
@@ -204,7 +204,7 @@
                                 <div class="item">
                                     <img src="{{ asset('img/gallery/dine2.jpg') }}">
                                     <div class="icons">
-                                        <a href="{{ asset('img/gallery/dine2.jpg') }}" class="openButton" data-fancybox data-caption="Hotel">
+                                        <a href="{{ asset('img/gallery/dine2.jpg') }}" class="openButton" data-fancybox="images" data-caption="Hotel">
                                             <i class="fa fa-search"></i>
                                         </a>
                                     </div>
@@ -215,7 +215,7 @@
                                 <div class="item">
                                     <img src="{{ asset('img/gallery/dine3.jpg') }}">
                                     <div class="icons">
-                                        <a href="{{ asset('img/gallery/dine3.jpg') }}" class="openButton" data-fancybox data-caption="Hotel">
+                                        <a href="{{ asset('img/gallery/dine3.jpg') }}" class="openButton" data-fancybox="images" data-caption="Hotel">
                                             <i class="fa fa-search"></i>
                                         </a>
                                     </div>
@@ -226,7 +226,7 @@
                                 <div class="item">
                                     <img src="{{ asset('img/gallery/stube1.jpg') }}">
                                     <div class="icons">
-                                        <a href="{{ asset('img/gallery/stube1.jpg') }}" class="openButton" data-fancybox data-caption="Hotel">
+                                        <a href="{{ asset('img/gallery/stube1.jpg') }}" class="openButton" data-fancybox="images" data-caption="Hotel">
                                             <i class="fa fa-search"></i>
                                         </a>
                                     </div>
@@ -237,7 +237,7 @@
                                 <div class="item">
                                     <img src="{{ asset('img/gallery/stube2.jpg') }}">
                                     <div class="icons">
-                                        <a href="{{ asset('img/gallery/stube2.jpg') }}" class="openButton" data-fancybox data-caption="Hotel">
+                                        <a href="{{ asset('img/gallery/stube2.jpg') }}" class="openButton" data-fancybox="images" data-caption="Hotel">
                                             <i class="fa fa-search"></i>
                                         </a>
                                     </div>
@@ -248,7 +248,7 @@
                                 <div class="item">
                                     <img src="{{ asset('img/gallery/stube3.jpg') }}">
                                     <div class="icons">
-                                        <a href="{{ asset('img/gallery/stube3.jpg') }}" class="openButton" data-fancybox data-caption="Hotel">
+                                        <a href="{{ asset('img/gallery/stube3.jpg') }}" class="openButton" data-fancybox="images" data-caption="Hotel">
                                             <i class="fa fa-search"></i>
                                         </a>
                                     </div>
@@ -259,7 +259,7 @@
                                 <div class="item">
                                     <img src="{{ asset('img/gallery/stube4.jpg') }}">
                                     <div class="icons">
-                                        <a href="{{ asset('img/gallery/stube4.jpg') }}" class="openButton" data-fancybox data-caption="Hotel">
+                                        <a href="{{ asset('img/gallery/stube4.jpg') }}" class="openButton" data-fancybox="images" data-caption="Hotel">
                                             <i class="fa fa-search"></i>
                                         </a>
                                     </div>

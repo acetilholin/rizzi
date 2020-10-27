@@ -44,11 +44,11 @@ class NewUser extends Notification
     public function toMail($notifiable)
     {
         return (new MailMessage)
-            ->from('no-reply@rizzihotel.com')
-            ->subject('Nuovo utente')
-            ->line('Nuovo utente è stato creato con la seguente email:')
+            ->from(env('MAIL_NO_REPLY'))
+            ->subject(trans('notifications.newUser'))
+            ->line(trans('notifications.newUserTitle'))
             ->line(new HtmlString('<div class="text-center"><b>'.$this->email.'</b></div><br>'))
-            ->line('Il tuo account non è attualmente attivo. Deve essere attivato prima di poter accedere.');
+            ->line(trans('notifications.newUserActivated'));
     }
 
     /**

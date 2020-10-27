@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tangerine&display=swap');
+
+/* general */
+.btn-custom {
+    color: #800000;
+    border: 2px solid #800000;
+    border-radius: 0;
+    padding: .5rem 1.1rem;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    margin: 1rem;
+    background: transparent;
+    cursor: pointer;
+}
+.btn-custom:hover {
+    color: #800000;
+    cursor: pointer;
+}
+button:focus, a:focus {
+    outline: 0 !important;
+    -webkit-appearance: none !important;
+    box-shadow: none !important;
+}
+
+/* navbar */
+.brand {
+    font-family: 'Tangerine', cursive;
+    font-size: 2.7rem;
+    text-decoration: none !important;
+    color: #800000;
+}
+.brand:hover {
+    color: #800000;
+}
+.title {
+    margin-left: 1rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    font-weight: bold;
+}
+.navbar {
+    padding: .1rem .7rem;
+}
+
+/* offers table */
+.remove {
+    color: red;
+}
+.m-item {
+    cursor: pointer;
+    text-align: center;
+}
+
+/* modals */
+.modal-content {
+    border-radius: 0 !important;
+}
+
+/* modal add */

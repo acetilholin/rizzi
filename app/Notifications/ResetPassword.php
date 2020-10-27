@@ -47,11 +47,11 @@ class ResetPassword extends Notification
     public function toMail($notifiable)
     {
         return (new MailMessage)
-            ->from(\env('MAIL_NO_REPLY'))
-            ->subject('Nuova password')
-            ->line('Inserisci un token, non sarà valido dopo 60 minuti.!')
+            ->from(env('MAIL_NO_REPLY'))
+            ->subject(trans('notifications.newPasswordTitle'))
+            ->line(trans('notifications.newPasswordLine'))
             ->line(new HtmlString('<div class="text-center"><b>'.$this->token.'</b></div>'))
-            ->action(Lang::get('Inserisci il token'), env('TOKEN_URL'));
+            ->action(Lang::get(trans('notifications.newPasswordBtn')), env('TOKEN_URL'));
     }
 
     /**
