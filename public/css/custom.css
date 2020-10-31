@@ -25,6 +25,13 @@ html, body {
 .text-custom {
     color: #800000;
 }
+.link-custom {
+    color: #800000;
+}
+.link-custom:hover {
+    text-decoration: none;
+    color: #5d0404;;
+}
 .btn-custom {
     color: #800000;
     border: 2px solid #800000;
@@ -82,6 +89,29 @@ h3.heading {
 }
 .alert {
     border-radius: 0 !important;
+}
+.cursor {
+    cursor: pointer;
+}
+.modal-wide {
+    max-width: 75% !important;
+}
+.is-invalid {
+    width: 100%;
+    margin-top: .25rem;
+    font-size: 80%;
+    color: #dc3545;
+}
+.invalid-feedback {
+    display: none;
+    width: 100%;
+    margin-top: 0.25rem;
+    font-size: 80%;
+    color: #e3342f;
+}
+.form-control, .custom-select {
+    color: #495057 !important;
+    font-size: 1rem !important;
 }
 
 /* loader */
@@ -475,7 +505,4 @@ footer img {
 .icons-visible {
     animation: fadeInLeft 1s cubic-bezier(.77,0,.175,1) 1;
     opacity: 1;
-}
-.weather {
-    text-decoration: none;
 }

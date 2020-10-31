@@ -36,10 +36,12 @@
     </body>
 </html>
 
+<!-- Vue src file -->
+<script src="{!! asset('js/app.js') !!}"></script>
+
 <!-- JS -->
 <script src="{!! asset('js/jquery-3.5.1.js') !!}"></script>
 <script src="{!! asset('js/custom.js') !!}"></script>
-<script src="{!! asset('js/gijgo.min.js') !!}"></script>
 <script src="{!! asset('js/hamburger.js') !!}"></script>
 <script src="{!! asset('js/jquery.waypoints.min.js') !!}"></script>
 <script src="{!! asset('js/lightbox.js') !!}"></script>

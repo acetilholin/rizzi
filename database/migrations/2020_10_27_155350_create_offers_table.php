@@ -19,8 +19,7 @@ class CreateOffersTable extends Migration
             $table->date('date_from')->nullable();
             $table->date('date_to')->nullable();
             $table->boolean('active')->default(true);
-            $table->text('subtitle')->nullable();;
-            $table->longText('description')->nullable();
+            $table->text('subtitle')->nullable();
             $table->timestamps();
         });
     }

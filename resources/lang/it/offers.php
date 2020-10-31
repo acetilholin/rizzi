@@ -2,12 +2,29 @@
 
 return [
     'title' => 'Titolo',
-    'dates' => 'Data',
+    'dates' => 'Dal / al',
     'active' => 'Attiva',
     'edit' => 'Modifica',
     'new' => 'Nuova',
     'remove' => 'Rimuova',
     'editOffer' => 'Modifica offerta',
     'newOffer' => "Nuova offerta",
-    'close' => 'Chiudi'
+    'close' => 'Chiudi',
+    'from' => 'Dal',
+    'status' => 'Stato',
+    'to' => 'Al',
+    'subtitle' => 'Breve descrizione',
+    'update' => 'Aggiorna',
+    'description' => 'Descrizione lunga',
+    'offerIsUpdated' => "L'offerta è aggiornata",
+    'add' => 'Inserisci',
+    'dateFromRequired' => 'Dal data da è obbligatoria',
+    'dateToRequired' => 'Al data a è obbligatoria',
+    'titleRequired' => 'Il titolo è obbligatorio',
+    'titleMin' => 'La lunghezza minima del titolo è :min',
+    'subtitleRequired' => 'È richiesta una breve descrizione',
+    'subtitleMin' => 'Breve descrizione La lunghezza minima è :min',
+    'descriptionRequired' => 'La descrizione è obbligatoria',
+    'descriptionMin' => 'Il numero minimo di caratteri per la descrizione è :min',
+    'created' => "L'offerta è stata creata."
 ];

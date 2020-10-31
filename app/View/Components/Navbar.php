@@ -7,14 +7,21 @@ use Illuminate\View\Component;
 class Navbar extends Component
 {
     public $title;
+    public $users;
+    public $stats;
+    public $offers;
+
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct($title)
+    public function __construct($title, $users, $stats, $offers)
     {
         $this->title = $title;
+        $this->users = $users;
+        $this->stats = $stats;
+        $this->offers = $offers;
     }
 
     /**

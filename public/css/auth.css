@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Tangerine&display=swap');
 
+body {
+    color: #505962;
+}
+
 /* general */
 .btn-custom {
     color: #800000;
@@ -22,6 +26,46 @@ button:focus, a:focus {
     -webkit-appearance: none !important;
     box-shadow: none !important;
 }
+.form-control,.custom-select {
+    border-radius: 0 !important;
+}
+.custom-control-input:checked~.custom-control-label::before {
+    background: #800000;
+    border-color: #800000;
+}
+#datepicker1:focus {
+    border-color: #800000;
+    box-shadow: 0 0 0 0.2rem rgba(128, 0, 0, 0.25);
+}
+#datepicker2:focus {
+    border-color: #800000;
+    box-shadow: 0 0 0 0.2rem rgba(128, 0, 0, 0.25);
+}
+.form-control:focus {
+    border-color: #800000;
+    box-shadow: 0 0 0 0.2rem rgba(128, 0, 0, 0.25);
+}
+.custom-select:focus {
+    border-color: #800000;
+    box-shadow: 0 0 0 0.2rem rgba(128, 0, 0, 0.25);
+}
+.custom-control-input:focus~.custom-control-label::before {
+    border-color: #800000;
+    box-shadow: 0 0 0 0.2rem rgba(128, 0, 0, 0.25);
+}
+.text-custom {
+    color: #800000;
+    font-weight: bold;
+}
+.remove-ml {
+    margin-left: 0!important;
+}
+.btn-outline-secondary {
+    border-radius: 0 !important;
+}
+.alert-info {
+    border-radius: 0!important;
+}
 
 /* navbar */
 .brand {
@@ -42,7 +86,20 @@ button:focus, a:focus {
 .navbar {
     padding: .1rem .7rem;
 }
-
+.nav-page {
+    margin-right: 1.5rem;
+}
+.nav-page i {
+    font-size: 1.3rem;
+    text-decoration: none;
+    color: black;
+}
+.nav-page i:hover {
+    color: #800000;
+}
+.tooltip .arrow::before {
+    display: none;
+}
 /* offers table */
 .remove {
     color: red;
@@ -56,5 +113,7 @@ button:focus, a:focus {
 .modal-content {
     border-radius: 0 !important;
 }
-
-/* modal add */
+.col-padding {
+    padding-right: 5px !important;
+    padding-left: 5px !important;
+}

@@ -10,11 +10,14 @@ class UserController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\View\View
      */
     public function index()
     {
-        //
+        $users = User::all();
+        return view('auth.users', [
+            'users' => $users
+        ]);
     }
 
     /**

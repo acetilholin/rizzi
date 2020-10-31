@@ -39,17 +39,6 @@ $(document).ready(function () {
 });
 
 $(document).ready(function () {
-    $('#datepicker1').datepicker({
-        uiLibrary: 'bootstrap4',
-        format: 'dd.mm.yyyy'
-    });
-    $('#datepicker2').datepicker({
-        uiLibrary: 'bootstrap4',
-        format: 'dd.mm.yyyy'
-    });
-});
-
-$(document).ready(function () {
     $("#back2Top").click(function (event) {
         event.preventDefault();
         $("html, body").animate({scrollTop: 0}, "slow");

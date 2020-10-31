@@ -16,6 +16,9 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>Hotel Rizzi</title>
 
+    <!-- Sweet Alerts -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
     <!-- Styling files -->
     <link rel="stylesheet" type="text/css" href="{{ asset('/css/hover.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('/css/auth.css') }}">
@@ -33,10 +36,10 @@
 <script src="{!! asset('js/jquery-3.5.1.js') !!}"></script>
 
 <script src="{!! asset('js/custom.js') !!}"></script>
-<script src="{!! asset('js/gijgo.min.js') !!}"></script>
 <script src="{!! asset('js/lightbox.js') !!}"></script>
 <script src="{!! asset('js/owl.carousel.min.js') !!}"></script>
 <script src="{!! asset('js/operations.js') !!}"></script>
+<script src="{!! asset('js/moment.js') !!}"></script>
 
 <!-- Isotope -->
 <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>

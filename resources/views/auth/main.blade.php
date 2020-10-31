@@ -1,12 +1,14 @@
 @extends('auth-master.master')
 @section('content')
-    <x-navbar title="Offerte"></x-navbar>
+    <x-navbar title="Offerte" users="users" stats="stats" offers=""></x-navbar>
     <div class="container">
         <div class="row">
-            <div class="add">
+            <div class="add col-12">
                 <div class="btn btn-custom hvr-underline-from-center" data-toggle="modal" data-target="#addOffer">{{ trans('offers.new') }}</div>
             </div>
-            <table class="table mt-3">
+            @include('messages.info')
+            @yield('content')
+            <table class="table mt-3 text-center table-hover">
                 <thead>
                 <tr>
                     <th scope="col">#</th>
@@ -22,7 +24,11 @@
                      <tr>
                          <th scope="row">{{ $index++ }}</th>
                          <td>{{ $offer['title'] }}</td>
-                         <td>{{ $offer['date_from'] }} - {{ $offer['date_to'] }}</td>
+                         <td>
+                             {{ \Carbon\Carbon::parse($offer['date_from'])->format('d.m.Y') }}
+                             <span class="text-custom">/</span>
+                             {{ \Carbon\Carbon::parse($offer['date_to'])->format('d.m.Y') }}
+                         </td>
                          <td>{!! (boolean)$offer['active'] ? "<i class='fas fa-check'></i>" : "" !!}</td>
                          <td>
                              <div class="btn-group dropright">
@@ -46,44 +52,12 @@
                  @endforeach
                 </tbody>
             </table>
+
             {{-- add offer modal --}}
-            <div class="modal fade" id="addOffer" tabindex="-1" aria-labelledby="addOffer" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">{{ trans('offers.newOffer') }}</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
+            <x-add-offer></x-add-offer>
 
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-custom hvr-underline-from-center" data-dismiss="modal">{{ trans('offers.close') }}</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
             {{-- edit offer modal --}}
-            <div class="modal fade" id="editOffer" tabindex="-1" aria-labelledby="editOffer" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">{{ trans('offers.editOffer') }}</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-custom hvr-underline-from-center" data-dismiss="modal">{{ trans('offers.close') }}</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <x-edit-offer></x-edit-offer>
         </div>
     </div>
 @endsection

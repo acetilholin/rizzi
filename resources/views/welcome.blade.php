@@ -81,7 +81,7 @@
                 <div class="row text-center">
                     <div class="filter mx-auto os-animation" data-animation="fadeInUp" >
                         <ul id="filters">
-                            <li><a href="#" data-filter="*" class="current hvr-underline-from-center">Tutto</a></li>
+                            <li><a href="#" data-filter="*" class="current hvr-underline-from-center">Tutte</a></li>
                             <li><a href="#" class="hvr-underline-from-center" data-filter=".hotel">Hotel</a></li>
                             <li><a href="#" class="hvr-underline-from-center" data-filter=".rooms">Camere</a></li>
                             <li><a href="#" class="hvr-underline-from-center" data-filter=".dine">Sala da cena</a></li>
@@ -114,31 +114,9 @@
                             </li>
                             <li onclick="" class="hotel col-xs-6 col-sm-4 col-md-3 col-lg-3">
                                 <div class="item">
-                                    <img src="{{ asset('img/gallery/hotel5.jpg') }}">
-                                    <div class="icons">
-                                        <a href="{{ asset('img/gallery/hotel5.jpg') }}" class="openButton" data-fancybox="images" data-caption="Hotel">
-                                            <i class="fa fa-search"></i>
-                                        </a>
-                                    </div>
-                                    <div class="image-overlay"></div>
-                                </div>
-                            </li>
-                            <li onclick="" class="hotel col-xs-6 col-sm-4 col-md-3 col-lg-3">
-                                <div class="item">
                                     <img src="{{ asset('img/gallery/hotel3.jpg') }}">
                                     <div class="icons">
                                         <a href="{{ asset('img/gallery/hotel3.jpg') }}" class="openButton" data-fancybox="images" data-caption="Hotel">
-                                            <i class="fa fa-search"></i>
-                                        </a>
-                                    </div>
-                                    <div class="image-overlay"></div>
-                                </div>
-                            </li>
-                            <li onclick="" class="hotel col-xs-6 col-sm-4 col-md-3 col-lg-3">
-                                <div class="item">
-                                    <img src="{{ asset('img/gallery/hotel4.jpg') }}">
-                                    <div class="icons">
-                                        <a href="{{ asset('img/gallery/hotel4.jpg') }}" class="openButton" data-fancybox="images" data-caption="Hotel">
                                             <i class="fa fa-search"></i>
                                         </a>
                                     </div>
@@ -183,6 +161,28 @@
                                     <img src="{{ asset('img/gallery/room4.jpg') }}">
                                     <div class="icons">
                                         <a href="{{ asset('img/gallery/room4.jpg') }}" class="openButton" data-fancybox="images" data-caption="Hotel">
+                                            <i class="fa fa-search"></i>
+                                        </a>
+                                    </div>
+                                    <div class="image-overlay"></div>
+                                </div>
+                            </li>
+                            <li onclick="" class="rooms col-xs-6 col-sm-4 col-md-3 col-lg-3">
+                                <div class="item">
+                                    <img src="{{ asset('img/gallery/room5.jpg') }}">
+                                    <div class="icons">
+                                        <a href="{{ asset('img/gallery/room5.jpg') }}" class="openButton" data-fancybox="images" data-caption="Hotel">
+                                            <i class="fa fa-search"></i>
+                                        </a>
+                                    </div>
+                                    <div class="image-overlay"></div>
+                                </div>
+                            </li>
+                            <li onclick="" class="rooms col-xs-6 col-sm-4 col-md-3 col-lg-3">
+                                <div class="item">
+                                    <img src="{{ asset('img/gallery/room6.jpg') }}">
+                                    <div class="icons">
+                                        <a href="{{ asset('img/gallery/room6.jpg') }}" class="openButton" data-fancybox="images" data-caption="Hotel">
                                             <i class="fa fa-search"></i>
                                         </a>
                                     </div>
@@ -359,89 +359,9 @@
                 <div class="heading-underline"></div>
             </div>
             <div class="os-animation" data-animation="fadeInLeft">
-                <form>
-                    <div class="row inquiry">
-                        <div class="form-group col-1">
-                            <label for="title">Titolo</label>
-                            <select class="custom-select" id="title" name="title">
-                                <option selected></option>
-                                <option value="1">Sig.</option>
-                                <option value="2">Sig.ra</option>
-                                <option value="3">Fam</option>
-                            </select>
-                        </div>
-                        <div class="form-group col-2">
-                            <label for="name">Nome *</label>
-                            <input type="text" class="form-control" id="name" name="name">
-                        </div>
-                        <div class="form-group col-2">
-                            <label for="surname">Cognome *</label>
-                            <input type="text" class="form-control" id="surname" name="surname">
-                        </div>
-                        <div class="form-group col-3">
-                            <label for="email">Email *</label>
-                            <input type="email" class="form-control" id="email" name="email">
-                        </div>
-                        <div class="form-group col-2">
-                            <label for="adults">Adulti *</label>
-                            <select class="custom-select" id="adults" name="adults">
-                                <option selected="selected">2 Adulti</option>
-                                <option value="1">1 Adulto</option>
-                                <option value="2">2 Adulti</option>
-                                <option value="3">3 Adulti</option>
-                                <option value="4">4 Adulti</option>
-                                <option value="5">5 Adulti</option>
-                                <option value="6">6 Adulti</option>
-                                <option value="7">7 Adulti</option>
-                                <option value="8">8 Adulti</option>
-                                <option value="9">9 Adulti</option>
-                                <option value="10">10 Adulti</option>
-                            </select>
-                        </div>
-                        <div class="form-group col-2">
-                            <label for="kids">Bambini *</label>
-                            <select class="custom-select" id="kids" name="kids">
-                                <option selected="selected">0 Bambini</option>
-                                <option value="0">0 Bambini</option>
-                                <option value="1">1 Bambino</option>
-                                <option value="2">2 Bambini</option>
-                                <option value="3">3 Bambini</option>
-                                <option value="4">4 Bambini</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="row justify-content-center">
-                        <div class="form-group col-3">
-                            <label for="board">Pensione *</label>
-                            <select class="custom-select" id="board" name="board">
-                                <option selected="selected">Mezza pensione</option>
-                                <option value="MP">Mezza pensione</option>
-                                <option value="PC">Pensione completa</option>
-                            </select>
-                        </div>
-                        <div class="form-group col-3">
-                            <label for="datepicker1">Arrivo *</label>
-                            <input type="text" class="form-control" id="datepicker1" name="dateFrom" placeholder="Arrivo *" required>
-                        </div>
-                        <div class="form-group col-3">
-                            <label for="datepicker2">Partenza *</label>
-                            <input type="text" class="form-control" id="datepicker2" name="dateTo" placeholder="Partenza *" required>
-                        </div>
-                    </div>
-                    <div class="row mt-4">
-                        I dati vengono trattati ai sensi del Regolamento (UE) 2016/679 del Parlamento europeo e del Consiglio.<br><br>
-                    </div>
-                    <div class="row">
-                        <div class="custom-control custom-checkbox">
-                            <input type="checkbox" class="custom-control-input" id="customCheck1">
-                            <label class="custom-control-label" for="customCheck1">Accetto la normativa sulla privacy</label>
-                        </div>
-                    </div>
-                    <div class="row mt-1">
-                        * Campo obbligatorio
-                    </div>
-                    <div class="btn btn-custom btn-inquiry hvr-underline-from-center">Inviare</div>
-                </form>
+                <div id="inquiryForm">
+                    <inquiry></inquiry>
+                </div>
             </div>
         </div>
     </div>
@@ -463,28 +383,12 @@
                         </a>
                     </div>
                     <div class="col-md-6 ml-2" id="contactForm">
-                        <form>
-                            <div class="form-group">
-                                <label for="fullnameContact">Nome e cognome</label>
-                                <input type="text" class="form-control" id="fullnameContact" aria-describedby="emailHelp" placeholder="Inserisci il tuo nome e cognome">
-                            </div>
-                            <div class="form-group">
-                                <label for="emailContact">Email</label>
-                                <input type="email" class="form-control" id="emailContact" aria-describedby="emailHelp" placeholder="Inserisci l'email">
-                            </div>
-                            <div class="form-group">
-                                <label for="msgContact">Messaggio</label>
-                                <textarea class="form-control" id="msgContact" rows="4" aria-describedby="emailHelp" placeholder="Inserisci il tuo messaggio"></textarea>
-                            </div>
-                            <button type="submit" class="btn btn-custom remove-ml hvr-underline-from-center">
-                                <i class="far fa-envelope"></i> Inviare
-                            </button>
-                        </form>
+                        <contact></contact>
                     </div>
                 </div>
             </div>
             <div class="copyright pt-5 pb-4">
-                &copy; Hotel Rizzi 2020
+                &copy; Hotel Rizzi 2020 / VAT ID IT01729970226
             </div>
         </footer>
     </div>
@@ -497,27 +401,8 @@
         </a>
     </div>
     <!-- Modal -->
-    <div class="modal fade" id="offer" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Natale 2020</h5>
-                </div>
-                <div class="modal-body">
-                    <div class="dates text-center text-custom">21.12.2020 - 26.12.2020</div>
-                    <p class="mt-2 lead">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error facere facilis iure labore possimus, recusandae.
-                    </p>
-                    <p class="mt-1 text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto deserunt earum eius et explicabo id maxime nam repellat totam, vel!</p>
-                    <p class="text-custom text-center">
-                        Mezza pensione: 48€<br>
-                        Pensione completa: 55€<br>
-                    </p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-custom hvr-underline-from-center" data-dismiss="modal">Chiudi</button>
-                </div>
-            </div>
-        </div>
-    </div>
+    <x-offer></x-offer>
+
+    <!-- Modal Privacy -->
+    <x-privacy></x-privacy>
 @endsection

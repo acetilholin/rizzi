@@ -18,15 +18,13 @@ class RegisterController extends Controller
      */
     public function register(Request $request)
     {
-        $helper = new UserHelper();
-
         $validatedData = $request->validate([
             'name' => 'required|min:3',
             'email' => 'required|unique:users|max:60',
             'password' => 'required|min:6',
             'password_confirmation' => 'required|same:password'
 
-        ], $helper->messages());
+        ], UserHelper::messages());
 
         $validatedData['password'] = Hash::make($validatedData['password']);
         $user = User::create($validatedData);

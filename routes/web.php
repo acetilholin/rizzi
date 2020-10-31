@@ -23,8 +23,14 @@ Route::post('/register-user', ['as' => 'registerUser', 'uses' => 'Auth\RegisterC
 Route::post('/login-user', ['as' => 'loginUser', 'uses' => 'Auth\LoginController@login']);
 Route::post('/send-token', ['as' => 'sendToken', 'uses' => 'Auth\ForgotPasswordController@send']);
 Route::post('/reset-password', ['as' => 'resetPassword', 'uses' => 'Auth\ResetPasswordController@reset']);
+Route::post('/send-message', ['as' => 'sendMessage', 'uses' => 'MessageController@message']);
+Route::post('/send-inquiry', ['as' => 'sendInquiry', 'uses' => 'MessageController@inquiry']);
 
 /* middleware */
 Route::get('main', ['as' => 'main', 'uses' => 'OfferController@index']);
 Route::get('logout', ['as' => 'logout', 'uses' => 'Auth\LoginController@logout']);
-Route::get('/offers/{id}', ['as' => 'showOffer', 'uses' => 'OfferController@show']);
+
+Route::resource('offers', 'OfferController');
+Route::put('/offer-update', ['as' => 'update', 'uses' => 'OfferController@update']);
+
+Route::resource('users', 'UserController');

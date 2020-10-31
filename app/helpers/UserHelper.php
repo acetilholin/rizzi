@@ -82,7 +82,7 @@ class UserHelper
         ];
     }
 
-    public function messages()
+    static function messages()
     {
         return [
             'email.required' => trans('auth.emailRequired'),

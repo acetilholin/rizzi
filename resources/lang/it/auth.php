@@ -26,5 +26,4 @@ return [
     "name" => "Nome",
     "passMinLen" => "La lunghezza minima è di 6 caratteri",
     "token" => "Token"
-
 ];
