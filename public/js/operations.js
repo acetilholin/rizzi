@@ -4,7 +4,7 @@ $(document).on('click', '.edit', function () {
         headers: {
             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
         },
-        url: "/offers/" + id,
+        url: "./offers/" + id,
         method: "GET",
         dataType: "json",
         success: function (data) {

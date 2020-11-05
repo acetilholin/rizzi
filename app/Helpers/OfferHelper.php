@@ -1,7 +1,7 @@
 <?php
 
 
-namespace App\helpers;
+namespace App\Helpers;
 
 
 use App\Offer;
@@ -35,7 +35,8 @@ class OfferHelper
             'photo.required' => trans('photo.required'),
             'photo.image' => trans('photo.image'),
             'photo.mimes' => trans('photo.mimes'),
-            'photo.max' => trans('photo.max')
+            'photo.max' => trans('photo.max'),
+            'photo.uploaded' => trans('photo.failedToUpload')
         ];
     }
 }

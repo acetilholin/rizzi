@@ -54,7 +54,7 @@
             <span class="sr-only">Loading...</span>
         </div>
         <div class="small mt-5 w-100">
-              <visits :info="graphData"></visits>
+              <visits :info="graphData" class="mb-4"></visits>
         </div>
     </div>
 </template>
@@ -91,7 +91,7 @@ export default {
     },
     methods: {
         fetch(from, to) {
-            axios.post('/interval', {
+            axios.post('./interval', {
                 datefrom: from,
                 dateto: to
             })

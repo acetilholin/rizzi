@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\helpers\UserHelper;
+use App\Helpers\UserHelper;
 use App\User;
 use Illuminate\Http\Request;
-use App\helpers\MessageHelper;
+use App\Helpers\MessageHelper;
 use Illuminate\Support\Facades\Validator;
 use App\Notifications\Message;
 use App\Notifications\Inquiry;

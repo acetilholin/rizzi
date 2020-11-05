@@ -2121,7 +2121,7 @@ __webpack_require__.r(__webpack_exports__);
     fetch: function fetch(from, to) {
       var _this = this;
 
-      axios.post('/interval', {
+      axios.post('./interval', {
         datefrom: from,
         dateto: to
       }).then(function (response) {
@@ -79818,7 +79818,7 @@ var render = function() {
     _c(
       "div",
       { staticClass: "small mt-5 w-100" },
-      [_c("visits", { attrs: { info: _vm.graphData } })],
+      [_c("visits", { staticClass: "mb-4", attrs: { info: _vm.graphData } })],
       1
     )
   ])

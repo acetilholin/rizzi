@@ -1,7 +1,7 @@
 <?php
 
 
-namespace App\helpers;
+namespace App\Helpers;
 
 
 class MessageHelper

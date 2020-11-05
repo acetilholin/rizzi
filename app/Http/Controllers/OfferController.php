@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\helpers\OfferHelper;
+use App\Helpers\OfferHelper;
 use App\Offer;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
@@ -92,7 +92,7 @@ class OfferController extends Controller
         $file = $request->file('photo');
         $imageName = "cover.jpg";
 
-        Image::make($file)->resize(1920, 1280)->save("img/custom-fixed/{$imageName}");
+        Image::make($file)->resize(1920, 1280)->save("./img/custom-fixed/{$imageName}");
         $message = trans('offers.imageChanged');
 
         return view('auth.main', [
