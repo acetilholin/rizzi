@@ -1,6 +1,5 @@
 import Contact from "./components/Contact";
 import Inquiry from "./components/Inquiry";
-import Add from "./components/Add";
 import Chart from "./components/Chart";
 import Vuelidate from 'vuelidate';
 import VueLoadingButton from 'vue-loading-button'
@@ -32,13 +31,6 @@ const inquiry = new Vue({
     el: '#inquiryForm',
     components: {
         inquiry: Inquiry
-    }
-});
-
-const addNew = new Vue({
-    el: '#addNew',
-    components: {
-        add: Add
     }
 });
 

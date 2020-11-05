@@ -16,8 +16,8 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>Hotel Rizzi</title>
 
-    <!-- Sweet Alerts -->
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <!-- SMN -->
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.css" rel="stylesheet">
 
     <!-- Styling files -->
     <link rel="stylesheet" type="text/css" href="{{ asset('/css/hover.css') }}">
@@ -42,6 +42,10 @@
 <!-- Datepicker -->
 <script type="text/javascript" src="{{ URL::asset('datepicker/gijgo.min.js') }}"></script>
 
+<!-- SMN -->
+<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.js"></script>
+
+<script src="{!! asset('js/summernote-it-IT.js') !!}"></script>
 <script src="{!! asset('js/custom.js') !!}"></script>
 <script src="{!! asset('js/lightbox.js') !!}"></script>
 <script src="{!! asset('js/owl.carousel.min.js') !!}"></script>

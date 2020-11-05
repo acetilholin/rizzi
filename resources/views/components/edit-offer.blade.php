@@ -23,8 +23,8 @@
                     </div>
                     <div class="row">
                         <div class="form-group col-12 col-padding">
-                            <label for="update-title">{{ trans('offers.description') }}</label>
-                            <textarea class="form-control" id="update-subtitle" rows="5" placeholder="Inserisci descrizione" name="subtitle"></textarea>
+                            <label for="update-subtitle">{{ trans('offers.description') }}</label>
+                            <textarea class="form-control editor" id="update-subtitle" name="subtitle"></textarea>
                         </div>
                     </div>
                     <div class="row justify-content-center">
@@ -36,14 +36,19 @@
                             </select>
                         </div>
                         <div class="form-group col-4 col-padding">
-                            <label for="update-pmp">Prezzo <span class="text-custom">mezza pensione</span></label>
+                            <label for="update-pmp">{{ trans('offers.price') }}
+                                <span class="text-custom">mezza pensione</span>
+                                <i class="fas fa-info-circle" id="p2-info" style="color: lightgray" data-toggle="p3-info" title="e.g. 44 senza segno per €" data-placement="top"></i>
+                            </label>
                             <input type="text" class="form-control" placeholder="Inserisci il prezzo" id="update-pmp" aria-describedby="priceMPHelp" name="price_mp" required>
-                            <small id="priceMPHelp" class="form-text text-muted">Formato prezzo: 44 senza segno per €</small>
+                            <small id="priceMPHelp" class="form-text text-muted">{{ trans('offers.zero') }}</small>
                         </div>
                         <div class="form-group col-4 col-padding">
-                            <label for="update-ppc">Prezzo <span class="text-custom">pensione completa</span></label>
+                            <label for="update-ppc">{{ trans('offers.price') }}
+                                <span class="text-custom">pensione completa</span>
+                            </label>
                             <input type="text" class="form-control" placeholder="Inserisci il prezzo" id="update-ppc" aria-describedby="pricePCHelp" name="price_pc" required>
-                            <small id="pricePCHelp" class="form-text text-muted">Formato prezzo: 44 senza segno per €</small>
+                            <small id="pricePCHelp" class="form-text text-muted">{{ trans('offers.zero') }}</small>
                         </div>
                     </div>
                     <input type="hidden" name="id" id="offer-id">

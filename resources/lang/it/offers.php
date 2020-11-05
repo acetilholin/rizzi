@@ -38,5 +38,9 @@ return [
     'imageChanged' => "L'immagine è cambiata",
     'cannotUploadImage' => "Questa foto non può essere caricata",
     'mp' => 'MP',
-    'pc' => 'PC'
+    'pc' => 'PC',
+    'pcLong' => 'pensione completa',
+    'mpLong' => 'mezza pensione',
+    'price' => 'Prezo',
+    'zero' => 'Immettere 0 per il campo vuoto'
 ];
