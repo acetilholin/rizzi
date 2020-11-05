@@ -9,5 +9,8 @@ return [
     'online' => 'Online',
     'edit' => 'Modifica',
     'lock' => 'Blocca',
-    'unlock' => 'Sblocca'
+    'unlock' => 'Sblocca',
+    'deleted' => 'Utente rimosso',
+    'locked' => "L'utente è bloccato",
+    'unlocked' => "L'utente è sbloccato"
 ];

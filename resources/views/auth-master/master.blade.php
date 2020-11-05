@@ -23,6 +23,7 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('/css/hover.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('/css/auth.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('/css/hover.css') }}">
+    <link href="https://cdn.jsdelivr.net/npm/gijgo@1.9.6/css/gijgo.min.css" rel="stylesheet">
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
@@ -32,8 +33,14 @@
 </body>
 </html>
 
+<!-- Vue src file -->
+<script src="{!! asset('js/app.js') !!}"></script>
+
 <!-- JS -->
 <script src="{!! asset('js/jquery-3.5.1.js') !!}"></script>
+
+<!-- Datepicker -->
+<script type="text/javascript" src="{{ URL::asset('datepicker/gijgo.min.js') }}"></script>
 
 <script src="{!! asset('js/custom.js') !!}"></script>
 <script src="{!! asset('js/lightbox.js') !!}"></script>

@@ -25,7 +25,7 @@
                         <input type="password" class="form-control" id="password2" name="password_confirmation" placeholder="Ripeti la password">
                     </div>
                     @csrf
-                    @include('messages.login-register')
+                    @include('messages.display')
                     @yield('content')
                     <div class="text-center" style="padding-top: 10px;">
                         &nbsp;<a href="{{ url('/login') }}" class="page-links" style="text-decoration: none">{{ trans('auth.login') }}</a> | <a href="{{ url('/new-password') }}" class="page-links" style="text-decoration: none">{{ trans('auth.fPass') }}</a>

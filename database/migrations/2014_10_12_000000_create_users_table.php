@@ -22,8 +22,8 @@ class CreateUsersTable extends Migration
             $table->string('login_token')->nullable();
             $table->string('reset_token')->nullable();
             $table->dateTime('token_time')->nullable();
-            $table->dateTime('last_seen')->nullable();
-            $table->string('country')->nullable();;
+            $table->dateTime('last_seen');
+            $table->string('country')->default('IT');;
             $table->boolean('silent')->default(false);
             $table->rememberToken()->nullable();
             $table->timestamps();

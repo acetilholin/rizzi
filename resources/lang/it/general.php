@@ -1,6 +1,5 @@
 <?php
 
 return [
-    'failed' => 'These credentials do not match our records.',
-    'throttle' => 'Too many login attempts. Please try again in :seconds seconds.',
+    '404' => "C'è stato un errore <i class='far fa-frown'></i>"
 ];

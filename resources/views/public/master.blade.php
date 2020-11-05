@@ -32,7 +32,6 @@
 <!-- JS -->
 <script src="{!! asset('js/jquery-3.5.1.js') !!}"></script>
 <script src="{!! asset('js/custom.js') !!}"></script>
-<script src="{!! asset('js/gijgo.min.js') !!}"></script>
 <script src="{!! asset('js/lightbox.js') !!}"></script>
 <script src="{!! asset('js/owl.carousel.min.js') !!}"></script>
 

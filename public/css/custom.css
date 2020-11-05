@@ -366,6 +366,8 @@ button:focus, a:focus {
     box-shadow: 0 0 .8rem rgba(0,0,0,.075);
     margin:  .2rem;
     transition: transform .4s ease;
+    min-height: 350px;
+    max-height: 351px;
 }
 .card:hover {
     transform: scale(.95);
@@ -374,7 +376,7 @@ button:focus, a:focus {
     text-align: justify;
 }
 #fixed-2 {
-    background-image: url('../img/fixed/cover5.jpg');
+    background-image: url('../img/custom-fixed/cover.jpg');
     z-index: -1;
 }
 .light {

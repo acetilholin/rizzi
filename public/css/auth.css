@@ -63,8 +63,9 @@ button:focus, a:focus {
 .btn-outline-secondary {
     border-radius: 0 !important;
 }
-.alert-info {
-    border-radius: 0!important;
+.alert {
+    border-radius: 0 !important;
+    text-align: center;
 }
 
 /* navbar */
@@ -116,4 +117,13 @@ button:focus, a:focus {
 .col-padding {
     padding-right: 5px !important;
     padding-left: 5px !important;
+}
+
+/* user table */
+.green-dot{
+    height: 10px;
+    width: 10px;
+    background-color: #009300;
+    border-radius: 50%;
+    display: inline-block;
 }

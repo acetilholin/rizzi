@@ -13,6 +13,10 @@ use Illuminate\Support\Facades\Hash;
 
 class LoginController extends Controller
 {
+    /**
+     * authenticate user
+     *
+     */
     public function authenticate($email, $password)
     {
         Auth::attempt(['email' => $email, 'password' => $password]);
@@ -34,15 +38,15 @@ class LoginController extends Controller
                 $name = User::where('email', $email)->pluck('name');
 
                 if ($token[0] === $loginToken) {
-                    return view('login', [
+                    return view('public.login', [
                         'email' => $email,
                         'name' => $name[0]
                     ]);
                 }
             }
-            return view('login');
+            return view('public.login');
         } else {
-            return view('login');
+            return view('public.login');
         }
     }
 

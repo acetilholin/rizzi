@@ -7,16 +7,23 @@
                     <span>{{ env('APP_NAME') }}</span>
                 </div>
                 <form method="POST" action="{{ route('loginUser') }}">
-                    <div class="form-group">
-                        <label for="email">{{ trans('auth.email') }}</label>
-                        <input type="email" class="form-control" id="email" name="email" placeholder="E-mail">
-                    </div>
+                    @if(isset($email))
+                        <div class="text-center mb-2">
+                            {{ trans('auth.hello') }} <span class="text-custom">{{ $name }}</span>
+                            <input type="hidden" name="email" value="{{ $email }}">
+                        </div>
+                    @else
+                        <div class="form-group">
+                            <label for="email">{{ trans('auth.email') }}</label>
+                            <input type="email" class="form-control" id="email" name="email" placeholder="E-mail">
+                        </div>
+                    @endif
                     <div class="form-group">
                         <label for="password">{{ trans('auth.pass') }}</label>
                         <input type="password" class="form-control" id="password" name="password" placeholder="Password">
                     </div>
                     @csrf
-                    @include('messages.login-register')
+                    @include('messages.display')
                     @yield('content')
                     <div class="text-center" style="padding-top: 10px;">
                         &nbsp;<a href="{{ url('/register') }}" class="page-links" style="text-decoration: none">{{ trans('auth.register') }}</a> | <a href="{{ url('/new-password') }}" class="page-links" style="text-decoration: none">{{ trans('auth.fPass') }}</a>

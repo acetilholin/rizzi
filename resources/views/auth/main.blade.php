@@ -3,11 +3,27 @@
     <x-navbar title="Offerte" users="users" stats="stats" offers=""></x-navbar>
     <div class="container">
         <div class="row">
-            <div class="add col-12">
-                <div class="btn btn-custom hvr-underline-from-center" data-toggle="modal" data-target="#addOffer">{{ trans('offers.new') }}</div>
+            <div class="col-12 mx-0">
             </div>
-            @include('messages.info')
-            @yield('content')
+            <div class="add col-12">
+                <div class="dropdown mt-2">
+                    <button class="btn btn-custom hvr-underline-from-center dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        {{ trans('offers.new') }}
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                        <button class="dropdown-item" type="button" data-toggle="modal" data-target="#changeImage">
+                            <i class="far fa-file-image"></i>  {{ trans('offers.image') }}
+                        </button>
+                        <button class="dropdown-item" type="button" data-toggle="modal" data-target="#addOffer">
+                            <i class="fas fa-list-ol"></i>  {{ trans('offers.offer') }}
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="message-content mt-4 col-12">
+                @include('messages.display')
+                @yield('content')
+            </div>
             <table class="table mt-3 text-center table-hover">
                 <thead>
                 <tr>
@@ -15,6 +31,14 @@
                     <th scope="col">{{ trans('offers.title') }}</th>
                     <th scope="col">{{ trans('offers.dates') }}</th>
                     <th scope="col">{{ trans('offers.active') }}</th>
+                    <th scope="col">
+                        {{ trans('offers.mp') }}
+                        <i class="fas fa-info-circle" id="mp" style="color: lightgray" data-toggle="mp" title="Mezza pensione" data-placement="top"></i>
+                    </th>
+                    <th scope="col">
+                        {{ trans('offers.pc') }}
+                        <i class="fas fa-info-circle" id="pc" style="color: lightgray" data-toggle="pc" title="Pensione completa" data-placement="top"></i>
+                    </th>
                     <th scope="col">{{ trans('offers.edit') }}</th>
                 </tr>
                 </thead>
@@ -30,6 +54,9 @@
                              {{ \Carbon\Carbon::parse($offer['date_to'])->format('d.m.Y') }}
                          </td>
                          <td>{!! (boolean)$offer['active'] ? "<i class='fas fa-check'></i>" : "" !!}</td>
+                         <td>{{ $offer['price_mp'] }}€</td>
+                         <td>{{ $offer['price_pc'] }}€</td>
+                         <td>{{ $offer['title'] }}</td>
                          <td>
                              <div class="btn-group dropright">
                                  <button type="button" class="btn btn-outline-dark dropdown-toggle dropdown-toggle-split" id="dropdownMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -41,7 +68,7 @@
                                          {{ trans('offers.edit') }}
                                      </a>
                                      <div class="dropdown-divider"></div>
-                                     <a class="edit dropdown-item m-item" id="{{ $offer['id'] }}">
+                                     <a class="edit dropdown-item m-item" href="{{ route('removeOffer', $offer['id']) }}">
                                          <i class="far fa-trash-alt remove"></i>
                                          {{ trans('offers.remove') }}
                                      </a>
@@ -58,6 +85,9 @@
 
             {{-- edit offer modal --}}
             <x-edit-offer></x-edit-offer>
+
+            {{-- change image modal --}}
+            <x-change-image></x-change-image>
         </div>
     </div>
 @endsection

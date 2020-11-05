@@ -18,6 +18,8 @@ class CreateOffersTable extends Migration
             $table->text('title');
             $table->date('date_from')->nullable();
             $table->date('date_to')->nullable();
+            $table->float('price_mp')->nullable();
+            $table->float('price_pc')->nullable();
             $table->boolean('active')->default(true);
             $table->text('subtitle')->nullable();
             $table->timestamps();

@@ -6,7 +6,7 @@ return [
     "nameRequired" => "Il nome è obbligatorio",
     "nameTooShort" => "Il nome è troppo breve. La lunghezza minima è :min",
     "emailAlreadyExists" => "Email già utilizzata",
-    "passwordTooShort" => "La password è troppo corta. la lunghezza minima è :min",
+    "passwordTooShort" => "La password è troppo corta. La lunghezza minima è :min",
     "passwordMismatch" => "Le passwords non corrispondono",
     "passConfirmationRequired" => "È richiesta la conferma della password",
     "registrationSuccessful" => "Registrazione riuscita",
@@ -24,6 +24,8 @@ return [
     "fPass" => "Password dimenticata",
     "send" => "Inviare",
     "name" => "Nome",
-    "passMinLen" => "La lunghezza minima è di 6 caratteri",
-    "token" => "Token"
+    "passMinLen" => "La lunghezza minima è di 8 caratteri",
+    "token" => "Token",
+    "change" => "Cambia",
+    'hello' => 'Ciao'
 ];

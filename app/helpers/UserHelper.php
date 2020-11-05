@@ -5,6 +5,7 @@ namespace App\helpers;
 
 
 use App\User;
+use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
@@ -13,7 +14,7 @@ class UserHelper
 {
     public function createLoginCookie($email)
     {
-        $cookieName = 'AVLogin';
+        $cookieName = 'RLogin';
         $token = Hash::make(Str::random(10));
         $data = [
             'email' => $email,
@@ -33,6 +34,28 @@ class UserHelper
             'reset_token' => $token,
             'token_time' => $timeNow
         ]);
+    }
+
+    public static function allUserIds()
+    {
+        $ids = [];
+        $users = User::where('silent', 0)->get();
+
+        foreach ($users as $user) {
+            $userData = $user->getAttributes();
+            $ids[] = $userData['id'];
+        }
+        return $ids;
+    }
+
+    public static function onlineUsers()
+    {
+        $userStatus = [];
+        $allUserIds = self::allUserIds();
+        for ($i = 0; $i < sizeof($allUserIds); $i++) {
+            $userStatus[$i] = Cache::has('user-is-online-'.$allUserIds[$i]) ? 'online' : 'offline';
+        }
+        return $userStatus;
     }
 
     public function emailAndTokenMatch($email, $token)
@@ -62,7 +85,7 @@ class UserHelper
     public function lastSeen($email, $dateTime)
     {
         $country = $this->geoData();
-        $country = $country['code'] == null ? 'SI' : $country['code'];
+        $country = $country['code'] == null ? 'IT' : $country['code'];
         $update = DB::table('users')
             ->where('email', $email)
             ->update([

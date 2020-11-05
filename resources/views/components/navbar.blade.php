@@ -3,22 +3,22 @@
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-        <span class="brand">{{ env('APP_NAME') }}</span>
+        <a href="{{ url('/main') }}" class="brand">{{ env('APP_NAME') }}</a>
         <span class="title mx-auto mt-2 mt-lg-0">{{ $title }}</span>
         <div class="form-inline my-2 my-lg-0">
             @if(empty(!$stats))
                 <span class="nav-page" data-toggle="tooltip" data-placement="top" id="t-stat" title="Statistiche">
-                        <a href=""><i class="fas fa-chart-line"></i></a>
+                        <a href="{{ url('statistics') }}"><i class="fas fa-chart-line"></i></a>
                     </span>
             @endif
             @if(empty(!$users))
                 <span class="nav-page" data-toggle="tooltip" data-placement="top" id="t-users" title="Utenti">
-                        <a href="/users"><i class="fas fa-users"></i></a>
+                        <a href="{{ url('/users') }}"><i class="fas fa-users"></i></a>
                     </span>
             @endif
             @if(empty(!$offers))
                 <span class="nav-page" data-toggle="tooltip" data-placement="top" id="t-offers" title="Offerte">
-                        <a href="/main"><i class="fas fa-list-ol"></i></a>
+                        <a href="{{ url('/main') }}"><i class="fas fa-list-ol"></i></a>
                     </span>
             @endif
             <form action="">

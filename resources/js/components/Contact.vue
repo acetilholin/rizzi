@@ -54,10 +54,16 @@
             </div>
         </div>
         <div id="response-message" class="col-md-12 text-center"></div>
+        <div class="custom-control custom-checkbox mb-3">
+            <input type="checkbox" v-model="cPrivacy" class="custom-control-input" id="checkContact">
+            <label class="custom-control-label" for="checkContact">
+                Accetto <span class="text-custom cursor" data-toggle="modal" data-target="#privacy">l’informativa sulla privacy</span>
+            </label>
+        </div>
         <VueLoadingButton class="btn btn-custom remove-ml hvr-underline-from-center"
                           @click.native="sendEmail"
                           :loading="isLoading"
-                          :disabled="$v.fullname.$invalid || !$v.email.email || !$v.email.required || $v.message.$invalid"
+                          :disabled="!this.cPrivacy"
         ><i class="far fa-envelope"></i> {{ buttonText }}
         </VueLoadingButton>
     </div>
@@ -72,6 +78,7 @@ export default {
     name: "Contact",
     data() {
         return {
+            cPrivacy: false,
             message: '', email: '', fullname: '',
             nameSurnameValid: '', emailValid: '', messageValid: '',
             isLoading: false,

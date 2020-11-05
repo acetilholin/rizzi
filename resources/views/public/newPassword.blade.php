@@ -12,7 +12,7 @@
                         <input type="email" class="form-control" id="email" name="email" placeholder="E-mail">
                     </div>
                     @csrf
-                    @include('messages.login-register')
+                    @include('messages.display')
                     @yield('content')
                     <div class="text-center" style="padding-top: 10px;">
                         &nbsp;<a href="{{ url('/login') }}" class="page-links" style="text-decoration: none">{{ trans('auth.login') }}</a> | <a href="{{ url('/register') }}" class="page-links" style="text-decoration: none">{{ trans('auth.register') }}</a>

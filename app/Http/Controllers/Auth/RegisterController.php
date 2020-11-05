@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use App\Notifications\NewUser;
 use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Hash;
 
 class RegisterController extends Controller
@@ -21,12 +22,14 @@ class RegisterController extends Controller
         $validatedData = $request->validate([
             'name' => 'required|min:3',
             'email' => 'required|unique:users|max:60',
-            'password' => 'required|min:6',
+            'password' => 'required|min:8',
             'password_confirmation' => 'required|same:password'
 
         ], UserHelper::messages());
 
         $validatedData['password'] = Hash::make($validatedData['password']);
+        unset($validatedData['password_confirmation']);
+        $validatedData['last_seen'] = Carbon::now("Europe/Rome")->format('Y-m-d H:i');
         $user = User::create($validatedData);
         $email = $request->input('email');
 

@@ -159,8 +159,8 @@
         </div>
         <div class="row">
             <div class="custom-control custom-checkbox">
-                <input type="checkbox" v-model="privacy" class="custom-control-input" id="customCheck1">
-                <label class="custom-control-label" for="customCheck1">
+                <input type="checkbox" v-model="iPrivacy" class="custom-control-input" id="checkInquiry">
+                <label class="custom-control-label" for="checkInquiry">
                     Accetto <span class="text-custom cursor" data-toggle="modal" data-target="#privacy">l’informativa sulla privacy</span>
                 </label>
             </div>
@@ -171,7 +171,7 @@
         <VueLoadingButton class="btn btn-custom remove-ml mt-3 hvr-underline-from-center"
                           @click.native="sendInquiry"
                           :loading="isLoading"
-                          :disabled="!this.privacy"
+                          :disabled="!this.iPrivacy"
         ><i class="far fa-envelope"></i> {{ buttonText }}
         </VueLoadingButton>
     </div>
@@ -195,7 +195,7 @@ export default {
                     dates: new Date()
                 }
             ],
-            privacy: false,
+            iPrivacy: false,
             isLoading: false,
             salutation: '', fullname: '',
             email: '', adults: '', kids: '',
@@ -204,7 +204,7 @@ export default {
             arrInv: false, kiInv: false, buttonText: 'Inviare',
             masks: {
                 input: 'DD.MM.YYYY'
-            },
+            }
         }
     },
     components: {

@@ -16,9 +16,20 @@ $(document).on('click', '.edit', function () {
             $('#update-title').val(offer.title);
             $('#update-subtitle').val(offer.subtitle);
             $('#update-active').val(offer.active).change();
+            $('#update-pmp').val(offer.price_mp);
+            $('#update-ppc').val(offer.price_pc);
             $('#editOffer').modal('show');
         }
     })
+});
+
+$('#update-from').datepicker({
+    uiLibrary: 'bootstrap4',
+    format: 'dd.mm.yyyy'
+});
+$('#update-to').datepicker({
+    uiLibrary: 'bootstrap4',
+    format: 'dd.mm.yyyy'
 });
 
 $(document).ready(function () {
@@ -27,4 +38,6 @@ $(document).ready(function () {
     $('#t-offers').tooltip()
     $('#u-state').tooltip()
     $('#u-online').tooltip()
+    $('#mp').tooltip()
+    $('#pc').tooltip()
 });

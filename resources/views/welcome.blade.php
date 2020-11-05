@@ -283,65 +283,28 @@
                     <div class="os-animation" data-animation="fadeInUp">
                         <div id="offers-carousel" class="owl-carousel owl-theme">
 
-                            <div class="card">
-                                <div class="card-header text-custom text-center">
-                                    Natale 2020
-                                </div>
-                                <div class="card-body">
-                                    <h5 class="card-title text-center">21.12.2020 - 26.12.2020</h5>
-                                    <p class="card-text border-bottom py-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut blanditiis commodi culpa doloremque expedita facilis labore magnam non perspiciatis praesentium rem, repellat reprehenderit saepe vel!</p>
-                                    <h6 class="text-custom text-center">MP 38€</h6>
-                                    <h6 class="text-custom text-center">PC 44€</h6>
-                                    <div class="btn btn-custom hvr-underline-from-center btn-card mx-auto d-block" data-toggle="modal" data-target="#offer">
-                                        più
+                            @foreach($offers as $offer)
+                                <div class="card">
+                                    <div class="card-header text-custom text-center">
+                                       {{ $offer['title'] }}
+                                    </div>
+                                    <div class="card-body">
+                                        <h5 class="card-title text-center">
+                                            {{ date("d.m.Y", strtotime($offer['date_from'])) }} - {{ date("d.m.Y", strtotime($offer['date_to'])) }}
+                                        </h5>
+                                        <p class="card-text border-bottom py-2 text-center">{!! $offer['subtitle'] !!}</p>
+                                        @if($offer['price_mp'] > 0)
+                                            <h6 class="text-custom text-center">Mezza Pensione {{ number_format($offer['price_mp'],2,',','.') }}€</h6>
+                                        @endif
+                                        @if($offer['price_pc'] > 0)
+                                            <h6 class="text-custom text-center">Pensione Ccompleta {{ number_format($offer['price_pc'],2,',','.') }}€</h6>
+                                        @endif
+                                        <div class="btn btn-custom hvr-underline-from-center btn-card mx-auto d-block cursor" data-toggle="modal" data-target="#offer">
+                                            più
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-
-                            <div class="card">
-                                <div class="card-header text-custom text-center">
-                                    Capodanno 2020
-                                </div>
-                                <div class="card-body">
-                                    <h5 class="card-title text-center">26.12.2020 - 05.01.2021</h5>
-                                    <p class="card-text border-bottom py-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut blanditiis commodi culpa doloremque expedita facilis labore magnam non perspiciatis praesentium rem, repellat reprehenderit saepe vel!</p>
-                                    <h6 class="text-custom text-center">MP 38€</h6>
-                                    <h6 class="text-custom text-center">PC 44€</h6>
-                                    <div class="btn btn-custom hvr-underline-from-center btn-card mx-auto d-block">
-                                        più
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="card">
-                                <div class="card-header text-custom text-center">
-                                    Settimane bianche
-                                </div>
-                                <div class="card-body">
-                                    <h5 class="card-title text-center">05.01.2021 - 08.02.2021</h5>
-                                    <p class="card-text border-bottom py-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut blanditiis commodi culpa doloremque expedita facilis labore magnam non perspiciatis praesentium rem, repellat reprehenderit saepe vel!</p>
-                                    <h6 class="text-custom text-center">MP 38€</h6>
-                                    <h6 class="text-custom text-center">PC 44€</h6>
-                                    <div class="btn btn-custom hvr-underline-from-center btn-card  mx-auto d-block">
-                                        più
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="card">
-                                <div class="card-header text-custom text-center">
-                                    Carnevale 2020
-                                </div>
-                                <div class="card-body">
-                                    <h5 class="card-title text-center">21.2.2021 - 25.2.2021</h5>
-                                    <p class="card-text border-bottom py-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut blanditiis commodi culpa doloremque expedita facilis labore magnam non perspiciatis praesentium rem, repellat reprehenderit saepe vel!</p>
-                                    <h6 class="text-custom text-center">MP 38€</h6>
-                                    <h6 class="text-custom text-center">PC 44€</h6>
-                                    <div class="btn btn-custom hvr-underline-from-center btn-card mx-auto d-block">
-                                        più
-                                    </div>
-                                </div>
-                            </div>
+                            @endforeach
 
                         </div>
                     </div>

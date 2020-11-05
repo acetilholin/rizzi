@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\helpers\UserHelper;
 use App\User;
 use Illuminate\Http\Request;
 
@@ -14,9 +15,10 @@ class UserController extends Controller
      */
     public function index()
     {
-        $users = User::all();
+        $users = User::where('silent', false)->get();
         return view('auth.users', [
-            'users' => $users
+            'users' => $users,
+            'onlineUsers' => UserHelper::onlineUsers()
         ]);
     }
 
@@ -67,22 +69,41 @@ class UserController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\User  $user
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\View\View
      */
-    public function update(Request $request, User $user)
+    public function update(Request $request, $id)
     {
-        //
+        $status = User::where('id', $id)->pluck('approved')->toArray();
+        $updateStatus = (boolean) $status[0] ? false : true;
+        $message = $updateStatus ? trans('users.unlocked') : trans('users.locked');
+
+        User::where('id', $id)
+            ->update([
+                'approved' => $updateStatus,
+            ]);
+
+        return view('auth.users', [
+            'users' => User::all(),
+            'info' => $message,
+            'onlineUsers' => UserHelper::onlineUsers()
+        ]);
     }
 
     /**
      * Remove the specified resource from storage.
      *
      * @param  \App\User  $user
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\View\View
      */
-    public function destroy(User $user)
+    public function destroy(User $user, $id)
     {
-        //
+        $user = User::find($id);
+        $user->delete();
+
+        return view('auth.users', [
+            'users' => User::all(),
+            'info' => trans('users.deleted'),
+            'onlineUsers' => UserHelper::onlineUsers()
+        ]);
     }
 }

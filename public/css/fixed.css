@@ -22,7 +22,7 @@
 .landing {
   position: relative;
   width: 100%;
-  height: 100vh; /* Change height of landing page image. */
+  height: 100vh;
   display: table !important;
   z-index: -1;
 }
@@ -35,8 +35,8 @@
   height: 100%;
 }
 .home-inner {
-  background-image: url("../img/cover4.jpg");
-  position: fixed; /* Change to relative to remove fixed style. */
+  background-image: url("../img/cover.jpg");
+  position: fixed;
   display: table;
   top: 0;
   left: 0;
