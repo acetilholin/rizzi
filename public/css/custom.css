@@ -406,18 +406,9 @@ button:focus, a:focus {
     background: #800000;
     border-color: #800000;
 }
-#datepicker1:focus {
-    border-color: #800000;
-    box-shadow: 0 0 0 0.2rem rgba(128, 0, 0, 0.25);
-}
-#datepicker2:focus {
-    border-color: #800000;
-    box-shadow: 0 0 0 0.2rem rgba(128, 0, 0, 0.25);
-}
-.form-control:focus {
-    border-color: #800000;
-    box-shadow: 0 0 0 0.2rem rgba(128, 0, 0, 0.25);
-}
+#datepicker1:focus,
+#datepicker2:focus,
+.form-control:focus,
 .custom-select:focus {
     border-color: #800000;
     box-shadow: 0 0 0 0.2rem rgba(128, 0, 0, 0.25);

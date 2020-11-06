@@ -53,7 +53,7 @@
                     </div>
                     <input type="hidden" name="id" id="offer-id">
                     @csrf
-                    <button type="submit" class="btn btn-custom">{{ trans('offers.update') }}</button>
+                    <button type="submit" class="btn btn-custom hvr-underline-from-center">{{ trans('offers.update') }}</button>
                 </form>
             </div>
             <div class="modal-footer">

@@ -29,22 +29,16 @@ button:focus, a:focus {
 .form-control,.custom-select {
     border-radius: 0 !important;
 }
+
 .custom-control-input:checked~.custom-control-label::before {
     background: #800000;
     border-color: #800000;
 }
-#datepicker1:focus {
-    border-color: #800000;
-    box-shadow: 0 0 0 0.2rem rgba(128, 0, 0, 0.25);
-}
-#datepicker2:focus {
-    border-color: #800000;
-    box-shadow: 0 0 0 0.2rem rgba(128, 0, 0, 0.25);
-}
-.form-control:focus {
-    border-color: #800000;
-    box-shadow: 0 0 0 0.2rem rgba(128, 0, 0, 0.25);
-}
+#datepicker1:focus,
+#datepicker2:focus,
+#update-to:focus,
+#update-from:focus,
+.form-control:focus,
 .custom-select:focus {
     border-color: #800000;
     box-shadow: 0 0 0 0.2rem rgba(128, 0, 0, 0.25);
@@ -53,15 +47,15 @@ button:focus, a:focus {
     border-color: #800000;
     box-shadow: 0 0 0 0.2rem rgba(128, 0, 0, 0.25);
 }
+.btn-outline-secondary {
+    border-radius: 0 !important;
+}
 .text-custom {
     color: #800000;
     font-weight: bold;
 }
 .remove-ml {
     margin-left: 0!important;
-}
-.btn-outline-secondary {
-    border-radius: 0 !important;
 }
 .alert {
     border-radius: 0 !important;
@@ -126,4 +120,9 @@ button:focus, a:focus {
     background-color: #009300;
     border-radius: 50%;
     display: inline-block;
+}
+
+/* editor */
+.note-editor.note-airframe, .note-editor.note-frame {
+    border-radius: 0!important;
 }
