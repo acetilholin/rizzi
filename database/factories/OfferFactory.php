@@ -11,6 +11,10 @@ $factory->define(Offer::class, function (Faker $faker) {
         'date_to' => $faker->date,
         'active' => $faker->boolean(true),
         'title' => $faker->text(30),
-        'subtitle' => $faker->text(50)
+        'title_en' => $faker->text(30),
+        'subtitle' => $faker->text(50),
+        'subtitle_en' => $faker->text(50),
+        'price_mp' => $faker->randomNumber(2),
+        'price_pc' => $faker->randomNumber(2)
     ];
 });

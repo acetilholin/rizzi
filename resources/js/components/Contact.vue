@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="form-group">
-            <label for="fullnContact">Nome e cognome</label>
+            <label for="fullnContact">{{ $t("contact.fullname") }}</label>
             <input type="text"
                    class="form-control"
                    id="fullnContact"
@@ -12,14 +12,14 @@
                    @input="$v.fullname.$touch"
             >
             <div class="invalid-feedback">
-                Inserisci nome e cognome
+                {{ $t("contact.insertFullname") }}
             </div>
             <div v-if="!$v.fullname.minLength">
-                <span class="is-invalid">La lunghezza minima è di {{ $v.fullname.$params.minLength.min - fullname.length }} caratteri</span>
+                <span class="is-invalid">{{ $t("contact.minLength") }} {{ $v.fullname.$params.minLength.min - fullname.length }} {{ $t("contact.chars") }}</span>
             </div>
         </div>
         <div class="form-group">
-            <label for="emailContact">Email</label>
+            <label for="emailContact">{{ $t("contact.email") }}</label>
             <input type="email"
                    class="form-control"
                    id="emailContact"
@@ -29,14 +29,14 @@
                    v-model="email"
             >
             <div class="invalid-feedback">
-                E-mail richiesta
+                {{ $t("contact.emailRequired") }}
             </div>
             <div v-if="!$v.email.email">
-                <span class="is-invalid">L'email non è valida.</span>
+                <span class="is-invalid">{{ $t("contact.emailInvalid") }}</span>
             </div>
         </div>
         <div class="form-group">
-            <label for="msgContact">Messaggio</label>
+            <label for="msgContact">{{ $t("contact.message") }}</label>
             <textarea class="form-control"
                       id="msgContact"
                       v-bind:class="{ 'is-invalid': messageValid }"
@@ -47,17 +47,19 @@
                       @input="$v.message.$touch"
             ></textarea>
             <div class="invalid-feedback">
-                Il messaggio è richiesto
+                {{ $t("contact.messageRequired") }}
             </div>
             <div v-if="!$v.message.minLength">
-                <span class="is-invalid">{{ $v.message.$params.minLength.min - message.length }} caratteri in più</span>
+                <span class="is-invalid">{{ $v.message.$params.minLength.min - message.length }} {{ $t("contact.charsMore") }}</span>
             </div>
         </div>
         <div id="response-message" class="col-md-12 text-center"></div>
         <div class="custom-control custom-checkbox mb-3">
             <input type="checkbox" v-model="cPrivacy" class="custom-control-input" id="checkContact">
             <label class="custom-control-label" for="checkContact">
-                Accetto <span class="text-custom cursor" data-toggle="modal" data-target="#privacy">l’informativa sulla privacy</span>
+                {{ $t("contact.accept") }}
+                <span v-if="lang ==='it'" class="text-custom cursor" data-toggle="modal" data-target="#privacyIT">{{ $t("contact.privacyPolicy") }}</span>
+                <span v-if="lang ==='en-GB'" class="text-custom cursor" data-toggle="modal" data-target="#privacyEN">{{ $t("contact.privacyPolicy") }}</span>
             </label>
         </div>
         <VueLoadingButton class="btn btn-custom remove-ml hvr-underline-from-center"
@@ -82,11 +84,15 @@ export default {
             message: '', email: '', fullname: '',
             nameSurnameValid: '', emailValid: '', messageValid: '',
             isLoading: false,
-            buttonText: 'Inviare'
+            buttonText: this.send,
         }
     },
+    props: ['lang','send'],
     components: {
         VueLoadingButton
+    },
+    created() {
+        this.$root.$i18n.locale = this.lang
     },
     validations: {
         fullname: {

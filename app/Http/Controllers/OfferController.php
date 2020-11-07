@@ -50,6 +50,8 @@ class OfferController extends Controller
         $priceMP = $request->price_mp;
         $pricePC = $request->price_pc;
         $active = (int) $request->active;
+        $titleEN = empty($request->titleEN) ? null : $request->titleEN;
+        $subtitleEN = empty($request->subtitleEN) ? null : $request->subtitleEN;
 
         $date_from = Carbon::parse($date_from)->format('Y-m-d');
         $date_to = Carbon::parse($date_to)->format('Y-m-d');
@@ -61,7 +63,9 @@ class OfferController extends Controller
             'active' => $active,
             'subtitle' => $subtitle,
             'price_mp' => $priceMP,
-            'price_pc' => $pricePC
+            'price_pc' => $pricePC,
+            'title_en' => $titleEN,
+            'subtitle_en' => $subtitleEN
         ]);
 
         return view('auth.main', [
@@ -142,8 +146,12 @@ class OfferController extends Controller
         $subtitle = $request->subtitle;
         $priceMP = $request->price_mp;
         $pricePC = $request->price_pc;
+        $titleEN = empty($request->titleEN) ? null : $request->titleEN;
+        $subtitleEN = empty($request->subtitleEN) ? null : $request->subtitleEN;
 
-        OfferHelper::update($id, $date_from, $date_to, $active, $title, $subtitle, $priceMP, $pricePC);
+
+        OfferHelper::update($id, $date_from, $date_to, $active, $title, $subtitle, $priceMP, $pricePC, $titleEN,
+            $subtitleEN);
 
         return view('auth.main', [
             'offers' => Offer::all(),

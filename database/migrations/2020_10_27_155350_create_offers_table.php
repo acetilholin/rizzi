@@ -16,12 +16,14 @@ class CreateOffersTable extends Migration
         Schema::create('offers', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->text('title');
-            $table->date('date_from')->nullable();
-            $table->date('date_to')->nullable();
-            $table->float('price_mp')->nullable();
-            $table->float('price_pc')->nullable();
+            $table->text('title_en')->nullable();
+            $table->date('date_from');
+            $table->date('date_to');
+            $table->float('price_mp');
+            $table->float('price_pc');
             $table->boolean('active')->default(true);
-            $table->text('subtitle')->nullable();
+            $table->text('subtitle');
+            $table->text('subtitle_en')->nullable();
             $table->timestamps();
         });
     }

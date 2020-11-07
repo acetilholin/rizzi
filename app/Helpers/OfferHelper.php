@@ -9,8 +9,18 @@ use Carbon\Carbon;
 
 class OfferHelper
 {
-    static function update($id, $date_from, $date_to, $active, $title, $subtitle, $priceMP, $pricePC)
-    {
+    static function update(
+        $id,
+        $date_from,
+        $date_to,
+        $active,
+        $title,
+        $subtitle,
+        $priceMP,
+        $pricePC,
+        $titleEN,
+        $subtitleEN
+    ) {
         Offer::where('id', $id)
             ->update([
                 'date_from' => Carbon::parse($date_from)->format('Y-m-d'),
@@ -19,7 +29,9 @@ class OfferHelper
                 'title' => $title,
                 'subtitle' => $subtitle,
                 'price_mp' => $priceMP,
-                'price_pc' => $pricePC
+                'price_pc' => $pricePC,
+                'title_en' => $titleEN,
+                'subtitle_en' => $subtitleEN
             ]);
     }
 

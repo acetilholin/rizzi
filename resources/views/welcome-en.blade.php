@@ -16,27 +16,27 @@
             <div class="collapse navbar-collapse justify-content-end text-uppercase font-weight-bold" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" style="padding-bottom: 0!important;" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            IT
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            EN
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="{{ route('english') }}">ENG</a>
+                            <a class="dropdown-item" href="{{ route('italian') }}">IT</a>
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a href="#home" class="nav-link">Casa</a>
+                        <a href="#home" class="nav-link">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#about" class="nav-link">Storia</a>
+                        <a href="#about" class="nav-link">Story</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#offers" class="nav-link">Offerte</a>
+                        <a href="#offers" class="nav-link">Offers</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#inquiry" class="nav-link">Richiesta</a>
+                        <a href="#inquiry" class="nav-link">Request</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#contact" class="nav-link">Contatto</a>
+                        <a href="#contact" class="nav-link">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -50,7 +50,7 @@
         </div>
         <div class="caption text-center">
             <div class="os-animation slow" data-animation="fadeInUp" data-delay=".1">
-                <h1 class="main-title">Benvenuti all' Hotel Rizzi</h1>
+                <h1 class="main-title">Welcome to Hotel Rizzi</h1>
             </div>
         </div>
         <a href="#about" class="down-arrow text-center">
@@ -63,23 +63,21 @@
         <div class="light">
             <div class="row text-center os-animation justify-content-center" data-animation="fadeInUp">
                 <div class="col-11 col-md-10 col-lg-9">
-                    <h1 class="narow text-custom about-title">Conduzione Familiare</h1>
+                    <h1 class="narow text-custom about-title">Family owned</h1>
                     <p class="lead os-animation" data-animation="fadeInUp">
-                        Gestito dalla famiglia Rizzi, è situato sulla
-                        strada delle Dolomiti. Nei secoli scorsi era
-                        denominato "Gasthof Sonne". L'edificio reca la data 1687 e la sua facciata
-                        è ornata da un gran S.Cristoforo affrescato
-                        e da un pregievole calvario ligneo.
+                        Managed by the Rizzi family, it is located on the Dolomites road.
+                        In past centuries it was called "Gasthof Sonne". The building bears
+                        the date 1687 and its façade is adorned with a large frescoed S.
+                        Cristoforo and a valuable wooden Calvary.
                     </p>
                     <p class="lead os-animation" data-animation="fadeInUp">
-                        Sono in possesso dell' albergo ancora gli
-                        antichi registri forestieri di fine '800 inizio
-                        '900 con importanti firme illustri, personaggi
-                        del mondo scientifico, alpinistico, commerciale
-                        e anche del primo mondo turistico.
+                        The ancient foreign registers
+                        of the late 19th and early 20th century are still in possession
+                        of the hotel with important illustrious signatures, personalities from
+                        the scientific, mountaineering, commercial and even the first world of tourism.
                     </p><br>
                     <p class="text-center os-animation" data-animation="fadeInUp">
-                        <a href="#inquiry" class="btn btn-custom hvr-underline-from-center">Richiesta</a>
+                        <a href="#inquiry" class="btn btn-custom hvr-underline-from-center">Request</a>
                     </p>
                 </div>
             </div>
@@ -89,10 +87,10 @@
                 <div class="row text-center">
                     <div class="filter mx-auto os-animation" data-animation="fadeInUp" >
                         <ul id="filters">
-                            <li><a href="#" data-filter="*" class="current hvr-underline-from-center">Tutte</a></li>
+                            <li><a href="#" data-filter="*" class="current hvr-underline-from-center">All</a></li>
                             <li><a href="#" class="hvr-underline-from-center" data-filter=".hotel">Hotel</a></li>
-                            <li><a href="#" class="hvr-underline-from-center" data-filter=".rooms">Camere</a></li>
-                            <li><a href="#" class="hvr-underline-from-center" data-filter=".dine">Sale da pranzo</a></li>
+                            <li><a href="#" class="hvr-underline-from-center" data-filter=".rooms">Rooms</a></li>
+                            <li><a href="#" class="hvr-underline-from-center" data-filter=".dine">Dining hall</a></li>
                             <li><a href="#" class="hvr-underline-from-center" data-filter=".stube">Weinstube</a></li>
                         </ul>
                     </div>
@@ -102,7 +100,7 @@
                                 <div class="item">
                                     <img src="{{ asset('img/gallery/hotel1.jpg') }}">
                                     <div class="icons">
-                                        <a href="{{ asset('img/gallery/hotel1.jpg') }}" class="openButton" data-fancybox="images" data-caption="Vista dalla strada principale">
+                                        <a href="{{ asset('img/gallery/hotel1.jpg') }}" class="openButton" data-fancybox="images" data-caption="Hotel from main road">
                                             <i class="fa fa-search"></i>
                                         </a>
                                     </div>
@@ -113,7 +111,7 @@
                                 <div class="item">
                                     <img src="{{ asset('img/gallery/hotel2.jpg') }}">
                                     <div class="icons">
-                                        <a href="{{ asset('img/gallery/hotel2.jpg') }}" class="openButton" data-fancybox="images" data-caption="Atrio">
+                                        <a href="{{ asset('img/gallery/hotel2.jpg') }}" class="openButton" data-fancybox="images" data-caption="Lobby">
                                             <i class="fa fa-search"></i>
                                         </a>
                                     </div>
@@ -124,7 +122,7 @@
                                 <div class="item">
                                     <img src="{{ asset('img/gallery/hotel3.jpg') }}">
                                     <div class="icons">
-                                        <a href="{{ asset('img/gallery/hotel3.jpg') }}" class="openButton" data-fancybox="images" data-caption="La stanza del cacciatore">
+                                        <a href="{{ asset('img/gallery/hotel3.jpg') }}" class="openButton" data-fancybox="images" data-caption="Hunter's room">
                                             <i class="fa fa-search"></i>
                                         </a>
                                     </div>
@@ -135,7 +133,7 @@
                                 <div class="item">
                                     <img src="{{ asset('img/gallery/room1.jpg') }}">
                                     <div class="icons">
-                                        <a href="{{ asset('img/gallery/room1.jpg') }}" class="openButton" data-fancybox="images" data-caption="Tipo di stanza 1">
+                                        <a href="{{ asset('img/gallery/room1.jpg') }}" class="openButton" data-fancybox="images" data-caption="Room type 1">
                                             <i class="fa fa-search"></i>
                                         </a>
                                     </div>
@@ -146,7 +144,7 @@
                                 <div class="item">
                                     <img src="{{ asset('img/gallery/room2.jpg') }}">
                                     <div class="icons">
-                                        <a href="{{ asset('img/gallery/room2.jpg') }}" class="openButton" data-fancybox="images" data-caption="Tipo di bagno 1">
+                                        <a href="{{ asset('img/gallery/room2.jpg') }}" class="openButton" data-fancybox="images" data-caption="Bathroom type 1">
                                             <i class="fa fa-search"></i>
                                         </a>
                                     </div>
@@ -157,7 +155,7 @@
                                 <div class="item">
                                     <img src="{{ asset('img/gallery/room3.jpg') }}">
                                     <div class="icons">
-                                        <a href="{{ asset('img/gallery/room3.jpg') }}" class="openButton" data-fancybox="images" data-caption="Tipo di stanza 2">
+                                        <a href="{{ asset('img/gallery/room3.jpg') }}" class="openButton" data-fancybox="images" data-caption="Room type 2">
                                             <i class="fa fa-search"></i>
                                         </a>
                                     </div>
@@ -168,7 +166,7 @@
                                 <div class="item">
                                     <img src="{{ asset('img/gallery/room4.jpg') }}">
                                     <div class="icons">
-                                        <a href="{{ asset('img/gallery/room4.jpg') }}" class="openButton" data-fancybox="images" data-caption="Tipo di bagno 2">
+                                        <a href="{{ asset('img/gallery/room4.jpg') }}" class="openButton" data-fancybox="images" data-caption="Bathroom type 2">
                                             <i class="fa fa-search"></i>
                                         </a>
                                     </div>
@@ -179,7 +177,7 @@
                                 <div class="item">
                                     <img src="{{ asset('img/gallery/room5.jpg') }}">
                                     <div class="icons">
-                                        <a href="{{ asset('img/gallery/room5.jpg') }}" class="openButton" data-fancybox="images" data-caption="Tipo di stanza 3">
+                                        <a href="{{ asset('img/gallery/room5.jpg') }}" class="openButton" data-fancybox="images" data-caption="Room type 3">
                                             <i class="fa fa-search"></i>
                                         </a>
                                     </div>
@@ -190,7 +188,7 @@
                                 <div class="item">
                                     <img src="{{ asset('img/gallery/room6.jpg') }}">
                                     <div class="icons">
-                                        <a href="{{ asset('img/gallery/room6.jpg') }}" class="openButton" data-fancybox="images" data-caption="Tipo di bagno 3">
+                                        <a href="{{ asset('img/gallery/room6.jpg') }}" class="openButton" data-fancybox="images" data-caption="Bathroom type 3">
                                             <i class="fa fa-search"></i>
                                         </a>
                                     </div>
@@ -201,7 +199,7 @@
                                 <div class="item">
                                     <img src="{{ asset('img/gallery/dine1.jpg') }}">
                                     <div class="icons">
-                                        <a href="{{ asset('img/gallery/dine1.jpg') }}" class="openButton" data-fancybox="images" data-caption="Sala da pranzo principale">
+                                        <a href="{{ asset('img/gallery/dine1.jpg') }}" class="openButton" data-fancybox="images" data-caption="Main dining hall">
                                             <i class="fa fa-search"></i>
                                         </a>
                                     </div>
@@ -212,7 +210,7 @@
                                 <div class="item">
                                     <img src="{{ asset('img/gallery/dine2.jpg') }}">
                                     <div class="icons">
-                                        <a href="{{ asset('img/gallery/dine2.jpg') }}" class="openButton" data-fancybox="images" data-caption="Sale da pranzo">
+                                        <a href="{{ asset('img/gallery/dine2.jpg') }}" class="openButton" data-fancybox="images" data-caption="Dining hall">
                                             <i class="fa fa-search"></i>
                                         </a>
                                     </div>
@@ -223,7 +221,7 @@
                                 <div class="item">
                                     <img src="{{ asset('img/gallery/dine3.jpg') }}">
                                     <div class="icons">
-                                        <a href="{{ asset('img/gallery/dine3.jpg') }}" class="openButton" data-fancybox="images" data-caption="Sale da pranzo">
+                                        <a href="{{ asset('img/gallery/dine3.jpg') }}" class="openButton" data-fancybox="images" data-caption="Dining hall">
                                             <i class="fa fa-search"></i>
                                         </a>
                                     </div>
@@ -256,7 +254,7 @@
                                 <div class="item">
                                     <img src="{{ asset('img/gallery/stube3.jpg') }}">
                                     <div class="icons">
-                                        <a href="{{ asset('img/gallery/stube3.jpg') }}" class="openButton" data-fancybox="images" data-caption="Bar al weinstube">
+                                        <a href="{{ asset('img/gallery/stube3.jpg') }}" class="openButton" data-fancybox="images" data-caption="Bar in weinstube">
                                             <i class="fa fa-search"></i>
                                         </a>
                                     </div>
@@ -267,7 +265,7 @@
                                 <div class="item">
                                     <img src="{{ asset('img/gallery/stube4.jpg') }}">
                                     <div class="icons">
-                                        <a href="{{ asset('img/gallery/stube4.jpg') }}" class="openButton" data-fancybox="images" data-caption="Il nostro famoso alce">
+                                        <a href="{{ asset('img/gallery/stube4.jpg') }}" class="openButton" data-fancybox="images" data-caption="Our famous moos">
                                             <i class="fa fa-search"></i>
                                         </a>
                                     </div>
@@ -284,7 +282,7 @@
         <div class="fixed-background">
             <div class="light">
                 <div class="col-12 text-center os-animation" data-animation="fadeInUp">
-                    <h3 class="heading">Offerte</h3>
+                    <h3 class="heading">Offers</h3>
                     <div class="heading-underline"></div>
                 </div>
                 <div class="">
@@ -294,28 +292,28 @@
                             @foreach($offers as $offer)
                                 <div class="card">
                                     <div class="card-header text-custom text-center">
-                                       {{ $offer['title'] }}
+                                        {{ $offer['title_en'] }}
                                     </div>
                                     <div class="card-body">
                                         <h5 class="card-title text-center">
                                             {{ date("d.m.Y", strtotime($offer['date_from'])) }} - {{ date("d.m.Y", strtotime($offer['date_to'])) }}
                                         </h5>
-                                        <p class="card-text py-2 text-center">{!! $offer['subtitle'] !!}</p>
+                                        <p class="card-text py-2 text-center">{!! $offer['subtitle_en'] !!}</p>
                                         <div class="border-bottom mb-2 mt-1"></div>
                                         @if($offer['price_mp'] > 0)
                                             <h6 class="text-center">
-                                                Mezza Pensione
+                                                Half board
                                                 <span class="text-custom">{{ number_format($offer['price_mp'],2,',','.') }}€</span>
                                             </h6>
                                         @endif
                                         @if($offer['price_pc'] > 0)
                                             <h6 class="text-center">
-                                                Pensione Completa
+                                                Full board
                                                 <span class="text-custom">{{ number_format($offer['price_pc'],2,',','.') }}€</span>
                                             </h6>
                                         @endif
                                         <div class="btn btn-custom hvr-underline-from-center btn-card mx-auto d-block cursor" data-toggle="modal" data-target="#offer">
-                                            più
+                                            more
                                         </div>
                                     </div>
                                 </div>
@@ -333,12 +331,12 @@
     <div id="inquiry" class="offset">
         <div class="narrow">
             <div class="col-12 os-animation" data-animation="fadeInUp">
-                <h3 class="heading">Richiesta</h3>
+                <h3 class="heading">Request</h3>
                 <div class="heading-underline"></div>
             </div>
             <div class="os-animation" data-animation="fadeInLeft">
                 <div id="inquiryForm">
-                    <inquiry lang="it" send="Inviare"></inquiry>
+                    <inquiry lang="en-GB" send="Send"></inquiry>
                 </div>
             </div>
         </div>
@@ -357,11 +355,11 @@
                         </p>
                         <a href="http://bit.ly/hotel-rizzi" target="_blank" class="btn btn-custom hvr-underline-from-center remove-ml">
                             <i class="fas fa-map-marker-alt"></i>
-                            Arrivare
+                            Arrival
                         </a>
                     </div>
                     <div class="col-md-6 ml-2" id="contactForm">
-                        <contact lang="it" send="Inviare"></contact>
+                        <contact lang="en-GB" send="Send"></contact>
                     </div>
                 </div>
             </div>

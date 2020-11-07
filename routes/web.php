@@ -13,7 +13,8 @@ Route::get('/token', function () {
     return view('public.token');
 });
 
-Route::get('/', ['as' => 'welcome', 'uses' => 'WellcomePageController@index']);
+Route::get('/', ['as' => 'italian', 'uses' => 'WelcomePageController@index']);
+Route::get('/en', ['as' => 'english', 'uses' => 'WelcomePageController@index']);
 Route::post('/register-user', ['as' => 'registerUser', 'uses' => 'Auth\RegisterController@register']);
 Route::post('/login-user', ['as' => 'loginUser', 'uses' => 'Auth\LoginController@login']);
 Route::post('/send-token', ['as' => 'sendToken', 'uses' => 'Auth\ForgotPasswordController@send']);

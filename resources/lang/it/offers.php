@@ -42,5 +42,7 @@ return [
     'pcLong' => 'pensione completa',
     'mpLong' => 'mezza pensione',
     'price' => 'Prezo',
-    'zero' => 'Immettere 0 per il campo vuoto'
+    'zero' => 'Immettere 0 per il campo vuoto',
+    'titleEN' => 'Indirizzo',
+    'descriptionEN' => 'Descrizione in inglese'
 ];

@@ -7,6 +7,7 @@ $(document).on('click', '.edit', function () {
         },
         url: "./offers/" + id,
         method: "GET",
+        data: { id: id },
         dataType: "json",
         success: function (data) {
             let offer = data.offer
@@ -15,7 +16,9 @@ $(document).on('click', '.edit', function () {
             $('#update-to').val(moment(offer.date_to).format('DD.MM.Y'))
             $('#offer-id').val(offer.id);
             $('#update-title').val(offer.title);
+            $('#update-title-en').val(offer.title_en);
             $('#update-subtitle').summernote('code',offer.subtitle);
+            $('#update-subtitle-en').summernote('code',offer.subtitle_en);
             $('#update-active').val(offer.active).change();
             $('#update-pmp').val(offer.price_mp);
             $('#update-ppc').val(offer.price_pc);
@@ -30,8 +33,8 @@ $(document).ready(function() {
         lang: 'it-IT',
         height: 150,
         toolbar: [
-            ['font', ['bold', 'underline', 'clear']],
-            ['para', ['ul', 'ol']],
+            ['style', ['bold', 'italic', 'underline', 'clear']],
+            ['para', ['ul', 'ol', 'paragraph']],
             ['color', ['forecolor']]
         ]
     });

@@ -6,6 +6,7 @@ use App\Helpers\UserHelper;
 use App\User;
 use Illuminate\Http\Request;
 use App\Helpers\MessageHelper;
+use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Validator;
 use App\Notifications\Message;
 use App\Notifications\Inquiry;
@@ -37,8 +38,10 @@ class MessageController extends Controller
 
             $user->notify(new Message($email, $fullname, $message, $geoData['country'], $geoData['city']));
 
+            $response = url()->current() === env('APP_URL').'/en' ? trans('messages.sent') : trans('messages.sentIT');
+
             return [
-                'resp' => trans('messages.sent'),
+                'resp' => $response,
                 'loading' => false
             ];
         }
@@ -55,6 +58,14 @@ class MessageController extends Controller
         $arrival = $request->arrival;
         $departure = $request->departure;
 
+        if (url()->current() === env('APP_URL').'/en') {
+            $response = trans('messages.sent');
+            $salutation = trans($salutation.'-en');
+        } else {
+            $response = trans('messages.sentIT');
+            $salutation = trans($salutation.'-it');
+        }
+
         $arrival = date("d.m.Y", strtotime($arrival));
         $departure = date("d.m.Y", strtotime($departure));
 
@@ -64,7 +75,7 @@ class MessageController extends Controller
         $user->notify(new Inquiry($salutation, $fullname, $email, $adults, $kids, $board, $arrival, $departure));
 
         return [
-            'resp' => trans('messages.sent'),
+            'resp' => $response,
             'loading' => false
         ];
     }

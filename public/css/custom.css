@@ -140,7 +140,7 @@ h3.heading {
     transition: all .7s;
 }
 .navbar {
-    padding: .7rem 1rem;
+    padding: 1rem 1rem;
     z-index: 4;
     transition: background-color 1.5s ease 0s;
 }
@@ -171,9 +171,29 @@ button:focus, a:focus {
     transition: all .6s ease;
 }
 .navbar.solid {
-    padding: .7rem .7rem;
     background: rgba(0,0,0,0.8) !important;
     transition: background-color 2s ease 0s;
+}
+.btn-transparent {
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: .1rem;
+    font-size: .9rem;
+    color: white;
+}
+.dropdown-menu {
+    background-color: transparent;
+    border: none;
+    padding: 0 !important;
+}
+.dropdown-item {
+    color: white !important;
+    margin-top: -.5rem;
+    font-weight: 700;
+}
+.dropdown-item:hover {
+    background-color: transparent;
+    color: #800000 !important;
 }
 .brand-resize {
     font-size: 2rem !important;

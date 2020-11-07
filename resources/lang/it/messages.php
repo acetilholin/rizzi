@@ -7,7 +7,8 @@ return [
     'emailFormat' => 'Formato e-mail errato',
     'messageRequired' => 'Il messaggio è richiesto',
     'messageMin' => 'La lunghezza minima del messaggio è :min',
-    'sent' => 'Inviato :)',
+    'sent' => 'Sent :)',
+    'sentIT' => 'Inviato :)',
     'newMessage' => 'Nuovo messaggio',
     'newMessageTitle' => 'Hai ricevuto un nuovo messaggio:',
     'email' => 'E-mail',
@@ -15,5 +16,11 @@ return [
     'state' => 'Stato',
     'city' => 'Città',
     'time' => 'Ora',
-    'msg' => 'Messaggio'
+    'msg' => 'Messaggio',
+    '1-it' => 'Signor',
+    '2-it' => 'Signora',
+    '3-it' => 'Famiglia',
+    '1-en' => 'Sir',
+    '2-en' => 'Madam',
+    '3-en' => 'Family'
 ];
