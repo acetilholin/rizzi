@@ -65,7 +65,7 @@ h3.heading {
     margin: 0 auto 2rem;
 }
 .narrow {
-    width: 80%;
+    width: 85%;
     margin: 0 auto;
     padding: 3rem 2rem 2rem;
 }
@@ -83,7 +83,7 @@ h3.heading {
     background: white !important;
     height: 3px !important;
 }
-.inquiry,.col-1,.col-2,.col-3 {
+.inquiry,.col-md-1,.col-md-2,.col-md-3 {
     padding-right: 5px !important;
     padding-left: 5px !important;
 }
@@ -94,7 +94,7 @@ h3.heading {
     cursor: pointer;
 }
 .modal-wide {
-    max-width: 75% !important;
+    min-width: 75%;
 }
 .is-invalid {
     width: 100%;
@@ -112,6 +112,11 @@ h3.heading {
 .form-control, .custom-select {
     color: #495057 !important;
     font-size: 1rem !important;
+}
+.light {
+    background: rgba(255, 255, 255, .85);
+    padding: 3rem 2rem 2rem;
+    z-index: 1000 !important;
 }
 
 /* loader */
@@ -386,8 +391,8 @@ button:focus, a:focus {
     box-shadow: 0 0 .8rem rgba(0,0,0,.075);
     margin:  .2rem;
     transition: transform .4s ease;
-    min-height: 350px;
-    max-height: 351px;
+    min-height: 330px;
+    max-height: 331px;
 }
 .card:hover {
     transform: scale(.95);
@@ -398,11 +403,6 @@ button:focus, a:focus {
 #fixed-2 {
     background-image: url('../img/custom-fixed/cover.jpg');
     z-index: -1;
-}
-.light {
-    background: rgba(255, 255, 255, .85);
-    padding: 3rem 2rem 2rem;
-    z-index: 1000 !important;
 }
 .btn-card {
     width: 40%;
@@ -518,4 +518,70 @@ footer img {
 .icons-visible {
     animation: fadeInLeft 1s cubic-bezier(.77,0,.175,1) 1;
     opacity: 1;
+}
+
+/* mobile optimization */
+@media (max-width: 575.98px) {
+    .brand {
+        font-size: 2.5rem;
+    }
+    .caption h1 {
+        font-size: 4rem;
+        letter-spacing: .2rem;
+    }
+    .lead {
+        text-align: justify;
+        font-size: 1.1rem;
+    }
+    .card-text {
+        font-size: .9rem;
+    }
+    .filter ul {
+        padding-left: 0 !important;
+    }
+    .filter li {
+        padding: 2px;
+    }
+    .card {
+        min-height: 420px;
+        max-height: 421px;
+    }
+    .b-right {
+        border-right: 0 !important;
+    }
+    #about .light {
+        padding-top: 0!important;
+    }
+    .about-title {
+        font-size: 2rem;
+    }
+    .modal-wide {
+        width: 95% !important;
+    }
+    .modal-body p {
+        text-align: justify;
+        font-size: .9rem;
+    }
+    .tx-mobile {
+        font-size: .9rem;
+    }
+    .toTop {
+      right: 0!important;
+    }
+    .c-padding {
+        padding: 1rem 0 !important;
+    }
+    .mobile-padding {
+        padding-bottom: 1.5rem;
+        border-bottom: 1px solid black;
+    }
+    .narrow {
+        width: 100%;
+    }
+    .padding {
+        padding-top: 1rem;
+    }
+    .copyright {
+        font-size: .8rem;
+    }
 }

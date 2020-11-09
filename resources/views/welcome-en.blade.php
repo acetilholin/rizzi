@@ -312,9 +312,9 @@
                                                 <span class="text-custom">{{ number_format($offer['price_pc'],2,',','.') }}€</span>
                                             </h6>
                                         @endif
-                                        <div class="btn btn-custom hvr-underline-from-center btn-card mx-auto d-block cursor" data-toggle="modal" data-target="#offer">
+                                       {{-- <div class="btn btn-custom hvr-underline-from-center btn-card mx-auto d-block cursor" data-toggle="modal" data-target="#offer">
                                             more
-                                        </div>
+                                        </div>--}}
                                     </div>
                                 </div>
                             @endforeach

@@ -15,9 +15,9 @@
                 <p>3. Nell’ambito dei trattamenti sopra descritti è necessaria la conoscenza e la memorizzazione di tutti i dati indispensabili (campi obbligatori contrassegnati con un asterisco *). L'eventuale rifiuto a fornire tali dati comporta la mancata o parziale esecuzione della richiesta</p>
                 <p>4. I dati non saranno di comunicazione alle altre società come riportato nelle privacy policy che regolamentano il presente sito internet e verranno conservati sino ad espletamento della presente richiesta e poi cancellati o trasformati in forma anonima fatto salvo sua esplicita richiesta.</p>
                 <p>5. I dati non saranno oggetto di diffusione a terzi se non là ove espressamente acconsentito dall’interessato.</p>
-                <p>6.  titolare del trattamento è: Albergo Rizzi</p>
+                <p>6. Titolare del trattamento è: Albergo Rizzi</p>
                 <p>7. Il responsabile del trattamento è il Veronika Salin</p>
-                <p>8. n ogni momento potrà esercitare i Suoi diritti nei confronti del titolare del trattamento, ai sensi dell’articolo 15 del Regolamento Europeo GDPR 679/2016 che per Sua comodità riproduciamo integralmente, contattandoci ai recapiti indicati nella presente informativa,
+                <p>8. In ogni momento potrà esercitare i Suoi diritti nei confronti del titolare del trattamento, ai sensi dell’articolo 15 del Regolamento Europeo GDPR 679/2016 che per Sua comodità riproduciamo integralmente, contattandoci ai recapiti indicati nella presente informativa,
                     <a href="#contact" class="link-custom" data-dismiss="modal">inviando una mail</a>.</p>
             </div>
             <div class="modal-footer">

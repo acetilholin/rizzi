@@ -2115,7 +2115,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -2195,7 +2194,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue_loading_button__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue-loading-button */ "./node_modules/vue-loading-button/dist/vue-loading-button.esm.js");
 /* harmony import */ var v_calendar_lib_components_date_picker_umd__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! v-calendar/lib/components/date-picker.umd */ "./node_modules/v-calendar/lib/components/date-picker.umd.js");
 /* harmony import */ var v_calendar_lib_components_date_picker_umd__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(v_calendar_lib_components_date_picker_umd__WEBPACK_IMPORTED_MODULE_2__);
-//
 //
 //
 //
@@ -81820,93 +81818,92 @@ var render = function() {
           : _vm._e()
       ]),
       _vm._v(" "),
-      _c("div", {
-        staticClass: "col-md-12 text-center",
-        attrs: { id: "response-message" }
-      }),
-      _vm._v(" "),
-      _c("div", { staticClass: "custom-control custom-checkbox mb-3" }, [
-        _c("input", {
-          directives: [
-            {
-              name: "model",
-              rawName: "v-model",
-              value: _vm.cPrivacy,
-              expression: "cPrivacy"
-            }
-          ],
-          staticClass: "custom-control-input",
-          attrs: { type: "checkbox", id: "checkContact" },
-          domProps: {
-            checked: Array.isArray(_vm.cPrivacy)
-              ? _vm._i(_vm.cPrivacy, null) > -1
-              : _vm.cPrivacy
-          },
-          on: {
-            change: function($event) {
-              var $$a = _vm.cPrivacy,
-                $$el = $event.target,
-                $$c = $$el.checked ? true : false
-              if (Array.isArray($$a)) {
-                var $$v = null,
-                  $$i = _vm._i($$a, $$v)
-                if ($$el.checked) {
-                  $$i < 0 && (_vm.cPrivacy = $$a.concat([$$v]))
+      _c(
+        "div",
+        { staticClass: "custom-control custom-checkbox mb-3 tx-mobile" },
+        [
+          _c("input", {
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: _vm.cPrivacy,
+                expression: "cPrivacy"
+              }
+            ],
+            staticClass: "custom-control-input",
+            attrs: { type: "checkbox", id: "checkContact" },
+            domProps: {
+              checked: Array.isArray(_vm.cPrivacy)
+                ? _vm._i(_vm.cPrivacy, null) > -1
+                : _vm.cPrivacy
+            },
+            on: {
+              change: function($event) {
+                var $$a = _vm.cPrivacy,
+                  $$el = $event.target,
+                  $$c = $$el.checked ? true : false
+                if (Array.isArray($$a)) {
+                  var $$v = null,
+                    $$i = _vm._i($$a, $$v)
+                  if ($$el.checked) {
+                    $$i < 0 && (_vm.cPrivacy = $$a.concat([$$v]))
+                  } else {
+                    $$i > -1 &&
+                      (_vm.cPrivacy = $$a
+                        .slice(0, $$i)
+                        .concat($$a.slice($$i + 1)))
+                  }
                 } else {
-                  $$i > -1 &&
-                    (_vm.cPrivacy = $$a
-                      .slice(0, $$i)
-                      .concat($$a.slice($$i + 1)))
+                  _vm.cPrivacy = $$c
                 }
-              } else {
-                _vm.cPrivacy = $$c
               }
             }
-          }
-        }),
-        _vm._v(" "),
-        _c(
-          "label",
-          {
-            staticClass: "custom-control-label",
-            attrs: { for: "checkContact" }
-          },
-          [
-            _vm._v(
-              "\n            " +
-                _vm._s(_vm.$t("contact.accept")) +
-                "\n            "
-            ),
-            _vm.lang === "it"
-              ? _c(
-                  "span",
-                  {
-                    staticClass: "text-custom cursor",
-                    attrs: {
-                      "data-toggle": "modal",
-                      "data-target": "#privacyIT"
-                    }
-                  },
-                  [_vm._v(_vm._s(_vm.$t("contact.privacyPolicy")))]
-                )
-              : _vm._e(),
-            _vm._v(" "),
-            _vm.lang === "en-GB"
-              ? _c(
-                  "span",
-                  {
-                    staticClass: "text-custom cursor",
-                    attrs: {
-                      "data-toggle": "modal",
-                      "data-target": "#privacyEN"
-                    }
-                  },
-                  [_vm._v(_vm._s(_vm.$t("contact.privacyPolicy")))]
-                )
-              : _vm._e()
-          ]
-        )
-      ]),
+          }),
+          _vm._v(" "),
+          _c(
+            "label",
+            {
+              staticClass: "custom-control-label",
+              attrs: { for: "checkContact" }
+            },
+            [
+              _vm._v(
+                "\n            " +
+                  _vm._s(_vm.$t("contact.accept")) +
+                  "\n            "
+              ),
+              _vm.lang === "it"
+                ? _c(
+                    "span",
+                    {
+                      staticClass: "text-custom cursor",
+                      attrs: {
+                        "data-toggle": "modal",
+                        "data-target": "#privacyIT"
+                      }
+                    },
+                    [_vm._v(_vm._s(_vm.$t("contact.privacyPolicy")))]
+                  )
+                : _vm._e(),
+              _vm._v(" "),
+              _vm.lang === "en-GB"
+                ? _c(
+                    "span",
+                    {
+                      staticClass: "text-custom cursor",
+                      attrs: {
+                        "data-toggle": "modal",
+                        "data-target": "#privacyEN"
+                      }
+                    },
+                    [_vm._v(_vm._s(_vm.$t("contact.privacyPolicy")))]
+                  )
+                : _vm._e()
+            ]
+          )
+        ]
+      ),
       _vm._v(" "),
       _c(
         "VueLoadingButton",
@@ -81954,7 +81951,7 @@ var render = function() {
     "div",
     [
       _c("div", { staticClass: "row inquiry" }, [
-        _c("div", { staticClass: "form-group col-1" }, [
+        _c("div", { staticClass: "form-group col-md-1" }, [
           _c("label", { attrs: { for: "title" } }, [
             _vm._v(_vm._s(_vm.$t("inquiry.title")))
           ]),
@@ -81989,8 +81986,6 @@ var render = function() {
               }
             },
             [
-              _c("option", { attrs: { selected: "" } }),
-              _vm._v(" "),
               _c("option", { attrs: { value: "0" } }, [
                 _vm._v(_vm._s(_vm.$t("inquiry.sir")))
               ]),
@@ -82008,7 +82003,7 @@ var render = function() {
           _c("div", { staticClass: "invalid-feedback" })
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "form-group col-3" }, [
+        _c("div", { staticClass: "form-group col-md-3" }, [
           _c("label", { attrs: { for: "fullnameInquiry" } }, [
             _vm._v(_vm._s(_vm.$t("contact.fullname")) + " *")
           ]),
@@ -82070,7 +82065,7 @@ var render = function() {
             : _vm._e()
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "form-group col-3" }, [
+        _c("div", { staticClass: "form-group col-md-3" }, [
           _c("label", { attrs: { for: "email" } }, [
             _vm._v(_vm._s(_vm.$t("contact.email")) + " *")
           ]),
@@ -82118,7 +82113,177 @@ var render = function() {
             : _vm._e()
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "form-group col-2" }, [
+        _c(
+          "div",
+          { staticClass: "form-group col-md-2" },
+          [
+            _c("label", { attrs: { for: "dp1" } }, [
+              _vm._v(_vm._s(_vm.$t("inquiry.arrival")) + " *")
+            ]),
+            _vm._v(" "),
+            _c("vc-date-picker", {
+              attrs: {
+                locale: this.lang,
+                attributes: _vm.attributes,
+                mode: "date",
+                masks: _vm.masks,
+                color: "red",
+                "max-date": _vm.departure
+              },
+              scopedSlots: _vm._u([
+                {
+                  key: "default",
+                  fn: function(ref) {
+                    var inputValue = ref.inputValue
+                    var inputEvents = ref.inputEvents
+                    return [
+                      _c(
+                        "input",
+                        _vm._g(
+                          {
+                            staticClass: "form-control",
+                            class: { "is-invalid": _vm.arrInv },
+                            attrs: { id: "dp1" },
+                            domProps: { value: inputValue }
+                          },
+                          inputEvents
+                        )
+                      )
+                    ]
+                  }
+                }
+              ]),
+              model: {
+                value: _vm.arrival,
+                callback: function($$v) {
+                  _vm.arrival = $$v
+                },
+                expression: "arrival"
+              }
+            }),
+            _vm._v(" "),
+            _vm.arrInv
+              ? _c("div", [
+                  _c("span", { staticClass: "is-invalid" }, [
+                    _vm._v(_vm._s(_vm.$t("inquiry.required")))
+                  ])
+                ])
+              : _vm._e()
+          ],
+          1
+        ),
+        _vm._v(" "),
+        _c(
+          "div",
+          { staticClass: "form-group col-md-2" },
+          [
+            _c("label", { attrs: { for: "dp2" } }, [
+              _vm._v(_vm._s(_vm.$t("inquiry.departure")) + " *")
+            ]),
+            _vm._v(" "),
+            _c("vc-date-picker", {
+              attrs: {
+                locale: this.lang,
+                mode: "date",
+                attributes: _vm.attributes,
+                masks: _vm.masks,
+                "min-date": _vm.arrival,
+                color: "red"
+              },
+              scopedSlots: _vm._u([
+                {
+                  key: "default",
+                  fn: function(ref) {
+                    var inputValue = ref.inputValue
+                    var inputEvents = ref.inputEvents
+                    return [
+                      _c(
+                        "input",
+                        _vm._g(
+                          {
+                            staticClass: "form-control",
+                            class: { "is-invalid": _vm.depInv },
+                            attrs: { id: "dp2" },
+                            domProps: { value: inputValue }
+                          },
+                          inputEvents
+                        )
+                      )
+                    ]
+                  }
+                }
+              ]),
+              model: {
+                value: _vm.departure,
+                callback: function($$v) {
+                  _vm.departure = $$v
+                },
+                expression: "departure"
+              }
+            }),
+            _vm._v(" "),
+            _vm.depInv
+              ? _c("div", [
+                  _c("span", { staticClass: "is-invalid" }, [
+                    _vm._v(_vm._s(_vm.$t("inquiry.required")))
+                  ])
+                ])
+              : _vm._e()
+          ],
+          1
+        )
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "row justify-content-center" }, [
+        _c("div", { staticClass: "form-group col-md-3" }, [
+          _c("label", { attrs: { for: "board" } }, [
+            _vm._v(_vm._s(_vm.$t("inquiry.board")))
+          ]),
+          _vm._v(" "),
+          _c(
+            "select",
+            {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.board,
+                  expression: "board"
+                }
+              ],
+              staticClass: "custom-select",
+              attrs: { id: "board", name: "board" },
+              on: {
+                change: function($event) {
+                  var $$selectedVal = Array.prototype.filter
+                    .call($event.target.options, function(o) {
+                      return o.selected
+                    })
+                    .map(function(o) {
+                      var val = "_value" in o ? o._value : o.value
+                      return val
+                    })
+                  _vm.board = $event.target.multiple
+                    ? $$selectedVal
+                    : $$selectedVal[0]
+                }
+              }
+            },
+            [
+              _c("option", { attrs: { value: "mezza" } }, [
+                _vm._v(_vm._s(_vm.$t("inquiry.MP")))
+              ]),
+              _vm._v(" "),
+              _c("option", { attrs: { value: "completa" } }, [
+                _vm._v(_vm._s(_vm.$t("inquiry.PC")))
+              ])
+            ]
+          ),
+          _vm._v(" "),
+          _c("div", { staticClass: "invalid-feedback" })
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "form-group col-md-2" }, [
           _c("label", { attrs: { for: "adults" } }, [
             _vm._v(_vm._s(_vm.$t("inquiry.adultsTitle")) + " *")
           ]),
@@ -82205,7 +82370,7 @@ var render = function() {
             : _vm._e()
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "form-group col-2" }, [
+        _c("div", { staticClass: "form-group col-md-2" }, [
           _c("label", { attrs: { for: "kids" } }, [
             _vm._v(_vm._s(_vm.$t("inquiry.childrenTitle")) + " *")
           ]),
@@ -82273,184 +82438,18 @@ var render = function() {
         ])
       ]),
       _vm._v(" "),
-      _c("div", { staticClass: "row justify-content-center" }, [
-        _c("div", { staticClass: "form-group col-3" }, [
-          _c("label", { attrs: { for: "board" } }, [
-            _vm._v(_vm._s(_vm.$t("inquiry.board")))
-          ]),
-          _vm._v(" "),
-          _c(
-            "select",
-            {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value: _vm.board,
-                  expression: "board"
-                }
-              ],
-              staticClass: "custom-select",
-              attrs: { id: "board", name: "board" },
-              on: {
-                change: function($event) {
-                  var $$selectedVal = Array.prototype.filter
-                    .call($event.target.options, function(o) {
-                      return o.selected
-                    })
-                    .map(function(o) {
-                      var val = "_value" in o ? o._value : o.value
-                      return val
-                    })
-                  _vm.board = $event.target.multiple
-                    ? $$selectedVal
-                    : $$selectedVal[0]
-                }
-              }
-            },
-            [
-              _c("option", { attrs: { value: "mezza" } }, [
-                _vm._v(_vm._s(_vm.$t("inquiry.MP")))
-              ]),
-              _vm._v(" "),
-              _c("option", { attrs: { value: "completa" } }, [
-                _vm._v(_vm._s(_vm.$t("inquiry.PC")))
-              ])
-            ]
-          ),
-          _vm._v(" "),
-          _c("div", { staticClass: "invalid-feedback" })
-        ]),
-        _vm._v(" "),
-        _c(
-          "div",
-          { staticClass: "form-group col-3" },
-          [
-            _c("label", { attrs: { for: "dp1" } }, [
-              _vm._v(_vm._s(_vm.$t("inquiry.arrival")) + " *")
-            ]),
-            _vm._v(" "),
-            _c("vc-date-picker", {
-              attrs: {
-                locale: this.lang,
-                attributes: _vm.attributes,
-                mode: "date",
-                masks: _vm.masks,
-                color: "red",
-                "max-date": _vm.departure
-              },
-              scopedSlots: _vm._u([
-                {
-                  key: "default",
-                  fn: function(ref) {
-                    var inputValue = ref.inputValue
-                    var inputEvents = ref.inputEvents
-                    return [
-                      _c(
-                        "input",
-                        _vm._g(
-                          {
-                            staticClass: "form-control",
-                            class: { "is-invalid": _vm.arrInv },
-                            attrs: { id: "dp1" },
-                            domProps: { value: inputValue }
-                          },
-                          inputEvents
-                        )
-                      )
-                    ]
-                  }
-                }
-              ]),
-              model: {
-                value: _vm.arrival,
-                callback: function($$v) {
-                  _vm.arrival = $$v
-                },
-                expression: "arrival"
-              }
-            }),
-            _vm._v(" "),
-            _vm.arrInv
-              ? _c("div", [
-                  _c("span", { staticClass: "is-invalid" }, [
-                    _vm._v(_vm._s(_vm.$t("inquiry.required")))
-                  ])
-                ])
-              : _vm._e()
-          ],
-          1
-        ),
-        _vm._v(" "),
-        _c(
-          "div",
-          { staticClass: "form-group col-3" },
-          [
-            _c("label", { attrs: { for: "dp2" } }, [
-              _vm._v(_vm._s(_vm.$t("inquiry.departure")) + " *")
-            ]),
-            _vm._v(" "),
-            _c("vc-date-picker", {
-              attrs: {
-                locale: this.lang,
-                mode: "date",
-                attributes: _vm.attributes,
-                masks: _vm.masks,
-                "min-date": _vm.arrival,
-                color: "red"
-              },
-              scopedSlots: _vm._u([
-                {
-                  key: "default",
-                  fn: function(ref) {
-                    var inputValue = ref.inputValue
-                    var inputEvents = ref.inputEvents
-                    return [
-                      _c(
-                        "input",
-                        _vm._g(
-                          {
-                            staticClass: "form-control",
-                            class: { "is-invalid": _vm.depInv },
-                            attrs: { id: "dp2" },
-                            domProps: { value: inputValue }
-                          },
-                          inputEvents
-                        )
-                      )
-                    ]
-                  }
-                }
-              ]),
-              model: {
-                value: _vm.departure,
-                callback: function($$v) {
-                  _vm.departure = $$v
-                },
-                expression: "departure"
-              }
-            }),
-            _vm._v(" "),
-            _vm.depInv
-              ? _c("div", [
-                  _c("span", { staticClass: "is-invalid" }, [
-                    _vm._v(_vm._s(_vm.$t("inquiry.required")))
-                  ])
-                ])
-              : _vm._e()
-          ],
-          1
-        )
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "row mt-4" }, [
-        _vm._v("\n        " + _vm._s(_vm.$t("inquiry.info")) + "\n        "),
-        _c("br"),
-        _c("br")
-      ]),
+      _c(
+        "div",
+        { staticClass: "row mt-4 tx-mobile", staticStyle: { "z-index": "-1" } },
+        [
+          _vm._v("\n        " + _vm._s(_vm.$t("inquiry.info")) + "\n        "),
+          _c("br"),
+          _c("br")
+        ]
+      ),
       _vm._v(" "),
       _c("div", { staticClass: "row" }, [
-        _c("div", { staticClass: "custom-control custom-checkbox" }, [
+        _c("div", { staticClass: "custom-control custom-checkbox tx-mobile" }, [
           _c("input", {
             directives: [
               {
@@ -82534,7 +82533,7 @@ var render = function() {
         ])
       ]),
       _vm._v(" "),
-      _c("div", { staticClass: "row mt-1" }, [
+      _c("div", { staticClass: "row mt-1 tx-mobile" }, [
         _vm._v("\n        " + _vm._s(_vm.$t("inquiry.mandatory")) + "\n    ")
       ]),
       _vm._v(" "),

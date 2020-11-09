@@ -53,8 +53,7 @@
                 <span class="is-invalid">{{ $v.message.$params.minLength.min - message.length }} {{ $t("contact.charsMore") }}</span>
             </div>
         </div>
-        <div id="response-message" class="col-md-12 text-center"></div>
-        <div class="custom-control custom-checkbox mb-3">
+        <div class="custom-control custom-checkbox mb-3 tx-mobile">
             <input type="checkbox" v-model="cPrivacy" class="custom-control-input" id="checkContact">
             <label class="custom-control-label" for="checkContact">
                 {{ $t("contact.accept") }}

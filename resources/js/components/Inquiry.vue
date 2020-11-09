@@ -1,21 +1,20 @@
 <template>
     <div>
         <div class="row inquiry" >
-            <div class="form-group col-1">
+            <div class="form-group col-md-1">
                 <label for="title">{{ $t("inquiry.title") }}</label>
                 <select class="custom-select"
                         id="title"
                         name="title"
                         v-model="salutation"
                 >
-                    <option selected></option>
                     <option value="0">{{ $t("inquiry.sir") }}</option>
                     <option value="1">{{ $t("inquiry.madam") }}</option>
                     <option value="2">{{ $t("inquiry.family") }}</option>
                 </select>
                 <div class="invalid-feedback"/>
             </div>
-            <div class="form-group col-3">
+            <div class="form-group col-md-3">
                 <label for="fullnameInquiry">{{ $t("contact.fullname") }} *</label>
                 <input type="text"
                        class="form-control"
@@ -33,7 +32,7 @@
                     <span class="is-invalid">{{ $t("contact.minLength") }} {{ $v.fullname.$params.minLength.min - fullname.length }} {{ $t("contact.chars") }}</span>
                 </div>
             </div>
-            <div class="form-group col-3">
+            <div class="form-group col-md-3">
                 <label for="email">{{ $t("contact.email") }} *</label>
                 <input type="email"
                        class="form-control"
@@ -50,62 +49,7 @@
                     <span class="is-invalid">{{ $t("contact.emailInvalid") }}</span>
                 </div>
             </div>
-            <div class="form-group col-2">
-                <label for="adults">{{ $t("inquiry.adultsTitle") }} *</label>
-                <select class="custom-select"
-                        id="adults"
-                        name="adults"
-                        v-model="adults"
-                        v-bind:class="{ 'is-invalid': aduInv }"
-                >
-                    <option value="1">1 {{ $t("inquiry.adult") }}</option>
-                    <option value="2">2 {{ $t("inquiry.adults") }}</option>
-                    <option value="3">3 {{ $t("inquiry.adults") }}</option>
-                    <option value="4">4 {{ $t("inquiry.adults") }}</option>
-                    <option value="5">5 {{ $t("inquiry.adults") }}</option>
-                    <option value="6">6 {{ $t("inquiry.adults") }}</option>
-                    <option value="7">7 {{ $t("inquiry.adults") }}</option>
-                    <option value="8">8 {{ $t("inquiry.adults") }}</option>
-                    <option value="9">9 {{ $t("inquiry.adults") }}</option>
-                    <option value="10">10 {{ $t("inquiry.adults") }}</option>
-                </select>
-                <div v-if="aduInv">
-                    <span class="is-invalid">{{ $t("inquiry.required") }}</span>
-                </div>
-            </div>
-            <div class="form-group col-2">
-                <label for="kids">{{ $t("inquiry.childrenTitle") }} *</label>
-                <select class="custom-select"
-                        id="kids"
-                        name="kids"
-                        v-model="kids"
-                        v-bind:class="{ 'is-invalid': kiInv }"
-                >
-                    <option value="0">0 {{ $t("inquiry.children") }}</option>
-                    <option value="1">1 {{ $t("inquiry.child") }}</option>
-                    <option value="2">2 {{ $t("inquiry.children") }}</option>
-                    <option value="3">3 {{ $t("inquiry.children") }}</option>
-                    <option value="4">4 {{ $t("inquiry.children") }}</option>
-                </select>
-                <div v-if="kiInv">
-                    <span class="is-invalid">{{ $t("inquiry.required") }}</span>
-                </div>
-            </div>
-        </div>
-        <div class="row justify-content-center">
-            <div class="form-group col-3">
-                <label for="board">{{ $t("inquiry.board") }}</label>
-                <select class="custom-select"
-                        id="board"
-                        name="board"
-                        v-model="board"
-                >
-                    <option value="mezza">{{ $t("inquiry.MP") }}</option>
-                    <option value="completa">{{ $t("inquiry.PC") }}</option>
-                </select>
-                <div class="invalid-feedback"> </div>
-            </div>
-            <div class="form-group col-3">
+            <div class="form-group col-md-2">
                 <label for="dp1">{{ $t("inquiry.arrival") }} *</label>
                 <vc-date-picker :locale=this.lang
                                 v-model="arrival"
@@ -129,7 +73,7 @@
                     <span class="is-invalid">{{ $t("inquiry.required") }}</span>
                 </div>
             </div>
-            <div class="form-group col-3">
+            <div class="form-group col-md-2">
                 <label for="dp2">{{ $t("inquiry.departure") }} *</label>
                 <vc-date-picker :locale=this.lang
                                 v-model="departure"
@@ -154,12 +98,67 @@
                 </div>
             </div>
         </div>
-        <div class="row mt-4">
+        <div class="row justify-content-center">
+            <div class="form-group col-md-3">
+                <label for="board">{{ $t("inquiry.board") }}</label>
+                <select class="custom-select"
+                        id="board"
+                        name="board"
+                        v-model="board"
+                >
+                    <option value="mezza">{{ $t("inquiry.MP") }}</option>
+                    <option value="completa">{{ $t("inquiry.PC") }}</option>
+                </select>
+                <div class="invalid-feedback"> </div>
+            </div>
+            <div class="form-group col-md-2">
+                <label for="adults">{{ $t("inquiry.adultsTitle") }} *</label>
+                <select class="custom-select"
+                        id="adults"
+                        name="adults"
+                        v-model="adults"
+                        v-bind:class="{ 'is-invalid': aduInv }"
+                >
+                    <option value="1">1 {{ $t("inquiry.adult") }}</option>
+                    <option value="2">2 {{ $t("inquiry.adults") }}</option>
+                    <option value="3">3 {{ $t("inquiry.adults") }}</option>
+                    <option value="4">4 {{ $t("inquiry.adults") }}</option>
+                    <option value="5">5 {{ $t("inquiry.adults") }}</option>
+                    <option value="6">6 {{ $t("inquiry.adults") }}</option>
+                    <option value="7">7 {{ $t("inquiry.adults") }}</option>
+                    <option value="8">8 {{ $t("inquiry.adults") }}</option>
+                    <option value="9">9 {{ $t("inquiry.adults") }}</option>
+                    <option value="10">10 {{ $t("inquiry.adults") }}</option>
+                </select>
+                <div v-if="aduInv">
+                    <span class="is-invalid">{{ $t("inquiry.required") }}</span>
+                </div>
+            </div>
+            <div class="form-group col-md-2">
+                <label for="kids">{{ $t("inquiry.childrenTitle") }} *</label>
+                <select class="custom-select"
+                        id="kids"
+                        name="kids"
+                        v-model="kids"
+                        v-bind:class="{ 'is-invalid': kiInv }"
+                >
+                    <option value="0">0 {{ $t("inquiry.children") }}</option>
+                    <option value="1">1 {{ $t("inquiry.child") }}</option>
+                    <option value="2">2 {{ $t("inquiry.children") }}</option>
+                    <option value="3">3 {{ $t("inquiry.children") }}</option>
+                    <option value="4">4 {{ $t("inquiry.children") }}</option>
+                </select>
+                <div v-if="kiInv">
+                    <span class="is-invalid">{{ $t("inquiry.required") }}</span>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-4 tx-mobile" style="z-index: -1">
             {{ $t("inquiry.info") }}
             <br><br>
         </div>
         <div class="row">
-            <div class="custom-control custom-checkbox">
+            <div class="custom-control custom-checkbox tx-mobile">
                 <input type="checkbox" v-model="iPrivacy" class="custom-control-input" id="checkInquiry">
                 <label class="custom-control-label" for="checkInquiry">
                     {{ $t("contact.accept") }}
@@ -168,7 +167,7 @@
                 </label>
             </div>
         </div>
-        <div class="row mt-1">
+        <div class="row mt-1 tx-mobile">
             {{ $t("inquiry.mandatory") }}
         </div>
         <VueLoadingButton class="btn btn-custom remove-ml mt-3 hvr-underline-from-center"

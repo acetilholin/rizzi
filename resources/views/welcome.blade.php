@@ -314,9 +314,9 @@
                                                 <span class="text-custom">{{ number_format($offer['price_pc'],2,',','.') }}€</span>
                                             </h6>
                                         @endif
-                                        <div class="btn btn-custom hvr-underline-from-center btn-card mx-auto d-block cursor" data-toggle="modal" data-target="#offer">
+                                       {{-- <div class="btn btn-custom hvr-underline-from-center btn-card mx-auto d-block cursor" data-toggle="modal" data-target="#offer">
                                             più
-                                        </div>
+                                        </div>--}}
                                     </div>
                                 </div>
                             @endforeach
@@ -347,7 +347,10 @@
         <footer>
             <div class="container c-padding">
                 <div class="row">
-                    <div class="col-md-5 b-right mx-2">
+                    <div class="col-md-5 offset-md-3 ml-2 b-right mobile-padding" id="contactForm">
+                        <contact lang="it" send="Inviare"></contact>
+                    </div>
+                    <div class="col-md-4 mx-2 padding">
                         <p class="text-contact">Hotel Rizzi</p>
                         <p>Piaza de Salin 6,<br>Pera di Fassa (TN) 38036</p>
                         <p>
@@ -359,9 +362,6 @@
                             <i class="fas fa-map-marker-alt"></i>
                             Arrivare
                         </a>
-                    </div>
-                    <div class="col-md-6 ml-2" id="contactForm">
-                        <contact lang="it" send="Inviare"></contact>
                     </div>
                 </div>
             </div>
