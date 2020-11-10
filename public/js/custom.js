@@ -85,10 +85,10 @@ $(document).ready(function () {
 $(document).ready(function () {
     $(window).scroll(function () {
         if ($(this).scrollTop() > 600) {
-            $('.icon-bar').addClass('icons-visible');
+            $('.icon').addClass('icon-visible');
             $('.toTop').addClass('toTop-opacity');
         } else {
-            $('.icon-bar').removeClass('icons-visible');
+            $('.icon').removeClass('icon-visible');
             $('.toTop').removeClass('toTop-opacity');
         }
     })

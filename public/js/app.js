@@ -2432,7 +2432,7 @@ __webpack_require__.r(__webpack_exports__);
     sendInquiry: function sendInquiry() {
       var _this = this;
 
-      if (this.privacy) {
+      if (this.iPrivacy) {
         this.depInv = this.departure === null;
         this.arrInv = this.arrival === null;
         this.aduInv = this.adults === '';
@@ -18749,7 +18749,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\nbutton[data-v-48bf77ac]:disabled {\n    cursor: not-allowed;\n    pointer-events: all !important;\n}\n", ""]);
+exports.push([module.i, "\nbutton[data-v-48bf77ac]:disabled {\n    cursor: not-allowed;\n    pointer-events: all !important;\n}\n.custom-control[data-v-48bf77ac] {\n    padding-left: 1.7rem !important;\n}\n", ""]);
 
 // exports
 

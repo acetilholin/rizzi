@@ -345,7 +345,10 @@
         <footer>
             <div class="container c-padding">
                 <div class="row">
-                    <div class="col-md-5 b-right mx-2">
+                    <div class="col-md-5 offset-md-3 ml-2 b-right mobile-padding" id="contactForm">
+                        <contact lang="en-GB" send="Send"></contact>
+                    </div>
+                    <div class="col-md-4 mx-2 padding">
                         <p class="text-contact">Hotel Rizzi</p>
                         <p>Piaza de Salin 6,<br>Pera di Fassa (TN) 38036</p>
                         <p>
@@ -358,9 +361,6 @@
                             Arrival
                         </a>
                     </div>
-                    <div class="col-md-6 ml-2" id="contactForm">
-                        <contact lang="en-GB" send="Send"></contact>
-                    </div>
                 </div>
             </div>
             <div class="copyright pt-5 pb-4">
@@ -371,11 +371,10 @@
     <a class="toTop hvr-icon-up" href="#home">
         <i class="fas fa-arrow-circle-up hvr-icon"></i>
     </a>
-    <div class="icon-bar">
-        <a href="https://www.facebook.com/Hotel-Rizzi-246131208760487" target="_blank" class="hvr-underline-from-center">
-            <i class="fab fa-facebook-f"></i>
-        </a>
-    </div>
+    <a class="icon hvr-icon-shrink" href="https://www.facebook.com/Hotel-Rizzi-246131208760487" target="_blank">
+        <i class="fab fa-facebook-f hvr-icon"></i>
+    </a>
+
     <!-- Modal -->
     <x-offer></x-offer>
 

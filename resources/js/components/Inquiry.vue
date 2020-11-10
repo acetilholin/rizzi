@@ -229,7 +229,7 @@ export default {
     },
     methods: {
         sendInquiry() {
-            if (this.privacy) {
+            if (this.iPrivacy) {
                 this.depInv = this.departure === null
                 this.arrInv = this.arrival === null
                 this.aduInv = this.adults === ''
@@ -266,5 +266,8 @@ export default {
     button:disabled {
         cursor: not-allowed;
         pointer-events: all !important;
+    }
+    .custom-control {
+        padding-left: 1.7rem !important;
     }
 </style>

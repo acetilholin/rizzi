@@ -373,11 +373,9 @@
     <a class="toTop hvr-icon-up" href="#home">
         <i class="fas fa-arrow-circle-up hvr-icon"></i>
     </a>
-    <div class="icon-bar">
-        <a href="https://www.facebook.com/Hotel-Rizzi-246131208760487" target="_blank" class="hvr-underline-from-center">
-            <i class="fab fa-facebook-f"></i>
-        </a>
-    </div>
+    <a class="icon hvr-icon-shrink" href="https://www.facebook.com/Hotel-Rizzi-246131208760487" target="_blank">
+        <i class="fab fa-facebook-f hvr-icon"></i>
+    </a>
     <!-- Modal -->
     <x-offer></x-offer>
 
