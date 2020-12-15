@@ -8,22 +8,22 @@ use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Notifications\Notification;
 use Illuminate\Support\HtmlString;
 
-class Message extends Notification
+class NewRegistration extends Notification
 {
     use Queueable;
 
-    public $email, $fullname, $message, $country, $city;
+    public $email;
+    public $country;
+    public $city;
 
     /**
      * Create a new notification instance.
      *
      * @return void
      */
-    public function __construct($email, $fullname, $message, $country, $city)
+    public function __construct($email, $country, $city)
     {
         $this->email = $email;
-        $this->fullname = $fullname;
-        $this->message = $message;
         $this->country = $country;
         $this->city = $city;
     }
@@ -47,18 +47,13 @@ class Message extends Notification
      */
     public function toMail($notifiable)
     {
-        $timestamp = date('H:i d-m-Y');
         return (new MailMessage)
-            ->from($this->email)
-            ->subject(trans('messages.newMessage'))
-            ->line(trans('messages.newMessageTitle'))
+            ->from(env('MAIL_NO_REPLY'))
+            ->subject(trans('notifications.newUserAdmin'))
+            ->line(trans('notifications.newUserTitleAdmin'))
             ->line(new HtmlString('<b>'.trans('messages.email').'</b>: '.$this->email))
-            ->line(new HtmlString('<b>'.trans('messages.sender').'</b>: '.$this->fullname))
             ->line(new HtmlString('<b>'.trans('messages.state').'</b>: '.$this->country))
-            ->line(new HtmlString('<b>'.trans('messages.city').'</b>: '.$this->city))
-            ->line(new HtmlString('<b>'.trans('messages.time').'</b>: '.$timestamp))
-            ->line(new HtmlString('<br><br><b>'.trans('messages.msg').'</b>: '))
-            ->line($this->message);
+            ->line(new HtmlString('<b>'.trans('messages.city').'</b>: '.$this->city));
     }
 
     /**

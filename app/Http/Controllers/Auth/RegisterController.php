@@ -9,6 +9,7 @@ use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Hash;
+use App\Notifications\NewRegistration;
 
 class RegisterController extends Controller
 {
@@ -32,8 +33,14 @@ class RegisterController extends Controller
         $validatedData['last_seen'] = Carbon::now("Europe/Rome")->format('Y-m-d H:i');
         $user = User::create($validatedData);
         $email = $request->input('email');
+        $userHelper = new UserHelper();
+
+        $geoData = $userHelper->geoData();
 
         $user->notify(new NewUser($email));
+
+        $user = User::where('email', env('EMAIL_ADMIN'))->first();
+        $user->notify(new NewRegistration($email, $geoData['country'], $geoData['city']));
         return redirect('/login')->with('success', trans('auth.registrationSuccessful'));
     }
 }

@@ -520,31 +520,6 @@ footer img {
     color: #800000;
 }
 
-/* social icons */
-/*.icon-bar {
-    position: fixed;
-    z-index: 100;
-    top: 50%;
-    opacity: 0;
-    left: 4px;
-    animation: fadeOutLeft 1s cubic-bezier(.77,0,.175,1) 1;
-}
-.icon-bar a {
-    background-color: white;
-    border: 2px solid #800000;
-    background-position: 15px 15px;
-    color: #800000;
-    display: block;
-    text-align: center;
-    padding: 10px 15px;
-    transition: all 0.3s ease;
-    font-size: 20px;
-}
-.icons-visible {
-    animation: fadeInLeft 1s cubic-bezier(.77,0,.175,1) 1;
-    opacity: 1;
-}*/
-
 /* mobile optimization */
 @media (max-width: 575.98px) {
     .brand {

@@ -9,5 +9,7 @@ return [
     "newPasswordBtn" => "Inserisci il token",
     "newPasswordP1" => "Se non riesci a fare clic sul pulsante ",
     "newPasswordP2" => " copia e incolla l'URL seguente",
-    "newPasswordP3" => "nel tuo browser web:"
+    "newPasswordP3" => "nel tuo browser web:",
+    "newUserAdmin" => "Nov uporabnik",
+    "newUserTitleAdmin" => "Ustvarjen je bil nov uporabnik s podatki"
 ];

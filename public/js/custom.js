@@ -1,7 +1,7 @@
 $(window).on('load', function () {
-    $('.loader .inner').fadeOut(450, function () {
+    $('.loader .inner').fadeOut(250, function () {
         $('nav').removeClass('opacity');
-        $('.loader').fadeOut(500);
+        $('.loader').fadeOut(400);
     });
     $('.items').isotope({
         filter: '*',

@@ -346,8 +346,8 @@
     <div id="contact" class="offset">
         <footer>
             <div class="container c-padding">
-                <div class="row">
-                    <div class="col-md-5 offset-md-3 ml-2 b-right mobile-padding" id="contactForm">
+                <div class="row justify-content-center">
+                    <div class="col-md-5 ml-2 b-right mobile-padding" id="contactForm">
                         <contact lang="it" send="Inviare"></contact>
                     </div>
                     <div class="col-md-4 mx-2 padding">
