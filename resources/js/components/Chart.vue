@@ -54,7 +54,7 @@
             <span class="sr-only">Loading...</span>
         </div>
         <div class="small mt-5 w-100">
-              <visits :info="graphData" class="mb-4"></visits>
+              <visits :info="graphData" class="pb-5"></visits>
         </div>
     </div>
 </template>

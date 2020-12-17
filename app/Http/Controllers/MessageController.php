@@ -31,10 +31,10 @@ class MessageController extends Controller
             $email = $request->input('email');
             $fullname = $request->input('fullname');
             $message = $request->input('message');
-            $admin = env('EMAIL_ADMIN');
+            $hotel = env('EMAIL_HOTEL');
             $geoData = $userHelper->geoData();
 
-            $user = User::where('email', $admin)->first();
+            $user = User::where('email', $hotel)->first();
 
             $user->notify(new Message($email, $fullname, $message, $geoData['country'], $geoData['city']));
 
@@ -69,8 +69,8 @@ class MessageController extends Controller
         $arrival = date("d.m.Y", strtotime($arrival));
         $departure = date("d.m.Y", strtotime($departure));
 
-        $admin = env('EMAIL_ADMIN');
-        $user = User::where('email', $admin)->first();
+        $hotel = env('EMAIL_HOTEL');
+        $user = User::where('email', $hotel)->first();
 
         $user->notify(new Inquiry($salutation, $fullname, $email, $adults, $kids, $board, $arrival, $departure));
 

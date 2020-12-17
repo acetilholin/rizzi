@@ -81617,7 +81617,7 @@ var render = function() {
     _c(
       "div",
       { staticClass: "small mt-5 w-100" },
-      [_c("visits", { staticClass: "mb-4", attrs: { info: _vm.graphData } })],
+      [_c("visits", { staticClass: "pb-5", attrs: { info: _vm.graphData } })],
       1
     )
   ])
