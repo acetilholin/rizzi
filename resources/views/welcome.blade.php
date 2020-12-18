@@ -98,182 +98,19 @@
                     </div>
                     <div class="itemsContainer os-animation" data-animation="fadeInUp">
                         <ul class="items">
-                            <li onclick="" class="hotel col-xs-6 col-sm-4 col-md-3 col-lg-3">
-                                <div class="item">
-                                    <img src="{{ asset('img/gallery/hotel1.jpg') }}">
-                                    <div class="icons">
-                                        <a href="{{ asset('img/gallery/hotel1.jpg') }}" class="openButton" data-fancybox="images" data-caption="Vista dalla strada principale">
-                                            <i class="fa fa-search"></i>
-                                        </a>
+                            @foreach($images as $image)
+                                <li onclick="" class="{!! $image->category !!} col-xs-6 col-sm-4 col-md-3 col-lg-3">
+                                    <div class="item">
+                                        <img src="{{ $image->path }}">
+                                        <div class="icons">
+                                            <a href="{{ $image->path }}" class="openButton" data-fancybox="images" data-caption="{!! $image->caption_it !!}">
+                                                <i class="fa fa-search"></i>
+                                            </a>
+                                        </div>
+                                        <div class="image-overlay"></div>
                                     </div>
-                                    <div class="image-overlay"></div>
-                                </div>
-                            </li>
-                            <li onclick="" class="hotel col-xs-6 col-sm-4 col-md-3 col-lg-3">
-                                <div class="item">
-                                    <img src="{{ asset('img/gallery/hotel2.jpg') }}">
-                                    <div class="icons">
-                                        <a href="{{ asset('img/gallery/hotel2.jpg') }}" class="openButton" data-fancybox="images" data-caption="Atrio">
-                                            <i class="fa fa-search"></i>
-                                        </a>
-                                    </div>
-                                    <div class="image-overlay"></div>
-                                </div>
-                            </li>
-                            <li onclick="" class="hotel col-xs-6 col-sm-4 col-md-3 col-lg-3">
-                                <div class="item">
-                                    <img src="{{ asset('img/gallery/hotel3.jpg') }}">
-                                    <div class="icons">
-                                        <a href="{{ asset('img/gallery/hotel3.jpg') }}" class="openButton" data-fancybox="images" data-caption="La stanza del cacciatore">
-                                            <i class="fa fa-search"></i>
-                                        </a>
-                                    </div>
-                                    <div class="image-overlay"></div>
-                                </div>
-                            </li>
-                            <li onclick="" class="rooms col-xs-6 col-sm-4 col-md-3 col-lg-3">
-                                <div class="item">
-                                    <img src="{{ asset('img/gallery/room1.jpg') }}">
-                                    <div class="icons">
-                                        <a href="{{ asset('img/gallery/room1.jpg') }}" class="openButton" data-fancybox="images" data-caption="Tipo di stanza 1">
-                                            <i class="fa fa-search"></i>
-                                        </a>
-                                    </div>
-                                    <div class="image-overlay"></div>
-                                </div>
-                            </li>
-                            <li onclick="" class="rooms col-xs-6 col-sm-4 col-md-3 col-lg-3">
-                                <div class="item">
-                                    <img src="{{ asset('img/gallery/room2.jpg') }}">
-                                    <div class="icons">
-                                        <a href="{{ asset('img/gallery/room2.jpg') }}" class="openButton" data-fancybox="images" data-caption="Tipo di bagno 1">
-                                            <i class="fa fa-search"></i>
-                                        </a>
-                                    </div>
-                                    <div class="image-overlay"></div>
-                                </div>
-                            </li>
-                            <li onclick="" class="rooms col-xs-6 col-sm-4 col-md-3 col-lg-3">
-                                <div class="item">
-                                    <img src="{{ asset('img/gallery/room3.jpg') }}">
-                                    <div class="icons">
-                                        <a href="{{ asset('img/gallery/room3.jpg') }}" class="openButton" data-fancybox="images" data-caption="Tipo di stanza 2">
-                                            <i class="fa fa-search"></i>
-                                        </a>
-                                    </div>
-                                    <div class="image-overlay"></div>
-                                </div>
-                            </li>
-                            <li onclick="" class="rooms col-xs-6 col-sm-4 col-md-3 col-lg-3">
-                                <div class="item">
-                                    <img src="{{ asset('img/gallery/room4.jpg') }}">
-                                    <div class="icons">
-                                        <a href="{{ asset('img/gallery/room4.jpg') }}" class="openButton" data-fancybox="images" data-caption="Tipo di bagno 2">
-                                            <i class="fa fa-search"></i>
-                                        </a>
-                                    </div>
-                                    <div class="image-overlay"></div>
-                                </div>
-                            </li>
-                            <li onclick="" class="rooms col-xs-6 col-sm-4 col-md-3 col-lg-3">
-                                <div class="item">
-                                    <img src="{{ asset('img/gallery/room5.jpg') }}">
-                                    <div class="icons">
-                                        <a href="{{ asset('img/gallery/room5.jpg') }}" class="openButton" data-fancybox="images" data-caption="Tipo di stanza 3">
-                                            <i class="fa fa-search"></i>
-                                        </a>
-                                    </div>
-                                    <div class="image-overlay"></div>
-                                </div>
-                            </li>
-                            <li onclick="" class="rooms col-xs-6 col-sm-4 col-md-3 col-lg-3">
-                                <div class="item">
-                                    <img src="{{ asset('img/gallery/room6.jpg') }}">
-                                    <div class="icons">
-                                        <a href="{{ asset('img/gallery/room6.jpg') }}" class="openButton" data-fancybox="images" data-caption="Tipo di bagno 3">
-                                            <i class="fa fa-search"></i>
-                                        </a>
-                                    </div>
-                                    <div class="image-overlay"></div>
-                                </div>
-                            </li>
-                            <li onclick="" class="dine col-xs-6 col-sm-4 col-md-3 col-lg-3">
-                                <div class="item">
-                                    <img src="{{ asset('img/gallery/dine1.jpg') }}">
-                                    <div class="icons">
-                                        <a href="{{ asset('img/gallery/dine1.jpg') }}" class="openButton" data-fancybox="images" data-caption="Sala da pranzo principale">
-                                            <i class="fa fa-search"></i>
-                                        </a>
-                                    </div>
-                                    <div class="image-overlay"></div>
-                                </div>
-                            </li>
-                            <li onclick="" class="dine col-xs-6 col-sm-4 col-md-3 col-lg-3">
-                                <div class="item">
-                                    <img src="{{ asset('img/gallery/dine2.jpg') }}">
-                                    <div class="icons">
-                                        <a href="{{ asset('img/gallery/dine2.jpg') }}" class="openButton" data-fancybox="images" data-caption="Sale da pranzo">
-                                            <i class="fa fa-search"></i>
-                                        </a>
-                                    </div>
-                                    <div class="image-overlay"></div>
-                                </div>
-                            </li>
-                            <li onclick="" class="dine col-xs-6 col-sm-4 col-md-3 col-lg-3">
-                                <div class="item">
-                                    <img src="{{ asset('img/gallery/dine3.jpg') }}">
-                                    <div class="icons">
-                                        <a href="{{ asset('img/gallery/dine3.jpg') }}" class="openButton" data-fancybox="images" data-caption="Sale da pranzo">
-                                            <i class="fa fa-search"></i>
-                                        </a>
-                                    </div>
-                                    <div class="image-overlay"></div>
-                                </div>
-                            </li>
-                            <li onclick="" class="stube col-xs-6 col-sm-4 col-md-3 col-lg-3">
-                                <div class="item">
-                                    <img src="{{ asset('img/gallery/stube1.jpg') }}">
-                                    <div class="icons">
-                                        <a href="{{ asset('img/gallery/stube1.jpg') }}" class="openButton" data-fancybox="images" data-caption="Weinstube">
-                                            <i class="fa fa-search"></i>
-                                        </a>
-                                    </div>
-                                    <div class="image-overlay"></div>
-                                </div>
-                            </li>
-                            <li onclick="" class="stube col-xs-6 col-sm-4 col-md-3 col-lg-3">
-                                <div class="item">
-                                    <img src="{{ asset('img/gallery/stube2.jpg') }}">
-                                    <div class="icons">
-                                        <a href="{{ asset('img/gallery/stube2.jpg') }}" class="openButton" data-fancybox="images" data-caption="Weinstube">
-                                            <i class="fa fa-search"></i>
-                                        </a>
-                                    </div>
-                                    <div class="image-overlay"></div>
-                                </div>
-                            </li>
-                            <li onclick="" class="stube col-xs-6 col-sm-4 col-md-3 col-lg-3">
-                                <div class="item">
-                                    <img src="{{ asset('img/gallery/stube3.jpg') }}">
-                                    <div class="icons">
-                                        <a href="{{ asset('img/gallery/stube3.jpg') }}" class="openButton" data-fancybox="images" data-caption="Bar al weinstube">
-                                            <i class="fa fa-search"></i>
-                                        </a>
-                                    </div>
-                                    <div class="image-overlay"></div>
-                                </div>
-                            </li>
-                            <li onclick="" class="stube col-xs-6 col-sm-4 col-md-3 col-lg-3">
-                                <div class="item">
-                                    <img src="{{ asset('img/gallery/stube4.jpg') }}">
-                                    <div class="icons">
-                                        <a href="{{ asset('img/gallery/stube4.jpg') }}" class="openButton" data-fancybox="images" data-caption="Il nostro famoso alce">
-                                            <i class="fa fa-search"></i>
-                                        </a>
-                                    </div>
-                                    <div class="image-overlay"></div>
-                                </div>
-                            </li>
+                                </li>
+                            @endforeach
                         </ul>
                     </div>
                 </div>

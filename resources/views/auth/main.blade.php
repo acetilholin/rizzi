@@ -1,6 +1,6 @@
 @extends('auth-master.master')
 @section('content')
-    <x-navbar title="Offerte" users="users" stats="stats" offers=""></x-navbar>
+    <x-navbar title="Offerte" users="users" stats="stats" offers="" gallery="galleria"></x-navbar>
     <div class="container">
         <div class="row">
             <div class="col-12 mx-0">
