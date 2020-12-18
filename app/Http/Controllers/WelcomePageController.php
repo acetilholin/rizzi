@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Resources\OfferCollection;
+use App\Gallery;
 use App\Offer;
 
 class WelcomePageController extends Controller
@@ -10,6 +10,7 @@ class WelcomePageController extends Controller
     public function index()
     {
         $offers = Offer::where('active', 1)->get();
+        $images = Gallery::all();
 
         $itaView = 'welcome';
         $engView = 'welcome-en';
@@ -17,7 +18,8 @@ class WelcomePageController extends Controller
         $view = url()->current() === env('APP_URL').'/en' ? $engView : $itaView;
 
         return view($view, [
-            'offers' => $offers
+            'offers' => $offers,
+            'images' => $images
         ]);
     }
 }

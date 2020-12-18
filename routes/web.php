@@ -36,5 +36,9 @@ Route::group(['middleware' =>'authUser'], function ($router) {
     Route::get('/lock-unlock/{id}', ['as' => 'lockUnlock', 'uses' => 'UserController@update']);
     Route::get('/statistics', ['as' => 'statistics', 'uses' => 'StatisticController@index']);
     Route::post('/interval', ['as' => 'interval', 'uses' => 'StatisticController@interval']);
+    Route::resource('galleries', 'GalleryController');
+    Route::get('/edit-image', ['as' => 'loadCar', 'uses' => 'GalleryController@edit']);
+    Route::get('/load-image', ['as' => 'loadImage', 'uses' => 'GalleryController@loadImage']);
+    Route::post('/update', ['as' => 'update', 'uses' => 'GalleryController@update']);
 });
 

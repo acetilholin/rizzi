@@ -6,6 +6,11 @@
         <a href="{{ url('/main') }}" class="brand">{{ env('APP_NAME') }}</a>
         <span class="title mx-auto mt-2 mt-lg-0">{{ $title }}</span>
         <div class="form-inline my-2 my-lg-0">
+            @if(empty(!$gallery))
+                <span class="nav-page" data-toggle="tooltip" data-placement="top" id="t-gallery" title="Galleria">
+                        <a href="{{ url('/galleries') }}"><i class="far fa-images"></i></a>
+                    </span>
+            @endif
             @if(empty(!$stats))
                 <span class="nav-page" data-toggle="tooltip" data-placement="top" id="t-stat" title="Statistiche">
                         <a href="{{ url('statistics') }}"><i class="fas fa-chart-line"></i></a>

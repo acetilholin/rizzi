@@ -27,6 +27,29 @@ $(document).on('click', '.edit', function () {
     })
 });
 
+$(document).on('click','.edit-image', function () {
+    var id = $(this).attr("id");
+    $.ajax({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        },
+        url:'/edit-image',
+        method: "GET",
+        data: { id: id },
+        dataType: "json",
+        success: function(data){
+            let image = data.image
+
+            $('#update-image').attr({"src": '/'+image.path})
+            $('#update-ita').val(image.caption_it)
+            $('#update-eng').val(image.caption_en)
+            $('#update-category').val(image.category);
+            $('#id').val(image.id)
+            $('#update').modal('show');
+        }
+    })
+});
+
 $(document).ready(function() {
     $('.editor').summernote({
         rows: 5,
@@ -57,9 +80,27 @@ $('#datepicker2').datepicker({
     format: 'dd.mm.yyyy'
 });
 
+$(document).on('click','.open-image', function () {
+    var id = $(this).attr("id");
+    $.ajax({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        },
+        url:'/load-image',
+        method: "GET",
+        data: { id: id },
+        dataType: "json",
+        success: function(data){
+            $('#hotel-img').attr({"src": '/'+data.image})
+            $('#image').modal('show');
+        }
+    })
+});
+
 $(document).ready(function () {
     $('#t-users').tooltip()
     $('#t-stat').tooltip()
+    $('#t-gallery').tooltip()
     $('#t-offers').tooltip()
     $('#u-state').tooltip()
     $('#u-online').tooltip()

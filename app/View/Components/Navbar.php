@@ -10,18 +10,20 @@ class Navbar extends Component
     public $users;
     public $stats;
     public $offers;
+    public $gallery;
 
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct($title, $users, $stats, $offers)
+    public function __construct($title, $users, $stats, $offers, $gallery)
     {
         $this->title = $title;
         $this->users = $users;
         $this->stats = $stats;
         $this->offers = $offers;
+        $this->gallery = $gallery;
     }
 
     /**

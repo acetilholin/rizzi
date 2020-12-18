@@ -17,6 +17,9 @@ body {
     background: transparent;
     cursor: pointer;
 }
+.pointer {
+    cursor: pointer;
+}
 .btn-custom:hover {
     color: #800000;
     cursor: pointer;
