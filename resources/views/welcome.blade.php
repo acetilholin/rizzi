@@ -77,6 +77,10 @@
                         '900 con importanti firme illustri, personaggi
                         del mondo scientifico, alpinistico, commerciale
                         e anche del primo mondo turistico.
+                        <br>
+                        Venite a trovarci al
+                        <a class="custom-link" target="_blank" href="http://www.rifugiobellavista.com/">rifugio Bellavista</a>,
+                        che è anche parte della nostra storia di famiglia.
                     </p><br>
                     <p class="text-center os-animation" data-animation="fadeInUp">
                         <a href="#inquiry" class="btn btn-custom hvr-underline-from-center">Richiesta</a>

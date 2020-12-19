@@ -7,7 +7,8 @@
                     <img src="/" id="update-image" style="height: 200px; width: 400px">
                 </div>
 
-                <form method="POST" action="{{ route('update') }}" enctype="multipart/form-data" id="modalupdate">
+                <form method="POST" action="{{ route('imageUpdate') }}" enctype="multipart/form-data" id="modalupdate">
+                    @method('PUT')
                     <div class="form-group">
                         <label for="exampleFormControlFile1">{{ trans('image.image') }}</label>
                         <br>

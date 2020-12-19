@@ -5,7 +5,7 @@
                 <h5 class="modal-title" id="exampleModalLabel">{{ trans('offers.editOffer') }}</h5>
             </div>
             <div class="modal-body">
-                <form method="POST" action="{{ route('update') }}" >
+                <form method="POST" action="{{ route('offerUpdate') }}" >
                     @method('PUT')
                     <div class="nav nav-tabs" id="nav-tab" role="tablist">
                         <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-update-it" role="tab" aria-controls="nav-home" aria-selected="true">

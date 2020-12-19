@@ -75,6 +75,10 @@
                         of the late 19th and early 20th century are still in possession
                         of the hotel with important illustrious signatures, personalities from
                         the scientific, mountaineering, commercial and even the first world of tourism.
+                        <br>
+                        Visit us at the
+                        <a class="custom-link" target="_blank" href="http://www.rifugiobellavista.com/">rifugio Bellavista</a>,
+                        which is also part of our family story.
                     </p><br>
                     <p class="text-center os-animation" data-animation="fadeInUp">
                         <a href="#inquiry" class="btn btn-custom hvr-underline-from-center">Request</a>

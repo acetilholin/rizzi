@@ -102,8 +102,8 @@ class GalleryController extends Controller
         if ($request->file('file') === null) {
             $imgPath = $image[0];
         } else {
-            $imageName = Str::random(10).".jpeg";
-            $imgPath = "img/gallery//{$imageName}";
+            $imageName = Str::random(10).".jpg";
+            $imgPath = "img/gallery/{$imageName}";
             $file = $request->file('file');
             Image::make($file)->resize(1328, 882)->save("img/gallery/{$imageName}");
         }

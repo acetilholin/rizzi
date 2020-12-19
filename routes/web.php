@@ -28,7 +28,7 @@ Route::group(['middleware' =>'authUser'], function ($router) {
     Route::get('main', ['as' => 'main', 'uses' => 'OfferController@index']);
     Route::get('logout', ['as' => 'logout', 'uses' => 'Auth\LoginController@logout']);
     Route::resource('offers', 'OfferController');
-    Route::put('/offer-update', ['as' => 'update', 'uses' => 'OfferController@update']);
+    Route::put('/offer-update', ['as' => 'offerUpdate', 'uses' => 'OfferController@update']);
     Route::get('/remove-offer/{id}', ['as' => 'removeOffer', 'uses' => 'OfferController@destroy']);
     Route::post('image', ['as' => 'image', 'uses' => 'OfferController@image']);
     Route::resource('users', 'UserController');
@@ -39,6 +39,6 @@ Route::group(['middleware' =>'authUser'], function ($router) {
     Route::resource('galleries', 'GalleryController');
     Route::get('/edit-image', ['as' => 'loadCar', 'uses' => 'GalleryController@edit']);
     Route::get('/load-image', ['as' => 'loadImage', 'uses' => 'GalleryController@loadImage']);
-    Route::post('/update', ['as' => 'update', 'uses' => 'GalleryController@update']);
+    Route::put('/image-update', ['as' => 'imageUpdate', 'uses' => 'GalleryController@update']);
 });
 

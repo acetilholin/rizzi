@@ -118,7 +118,14 @@ h3.heading {
     padding: 3rem 2rem 2rem;
     z-index: 1000 !important;
 }
-
+.custom-link {
+    color: #800000;
+    font-weight: 400;
+}
+.custom-link:hover {
+    color: #660202;
+    text-decoration: none;
+}
 /* loader */
 .loader {
     width: 100%;
