@@ -32,8 +32,8 @@
                         <td>{{ $image->caption_it }}</td>
                         <td>{{ $image->caption_en }}</td>
                         <td class="pointer">
-                            <div class="btn btn-custom" style="margin: 0; padding: 5px 10px">
-                                <i class="edit-image fas fa-pencil-alt" id="{{ $image->id }}"></i>
+                            <div class="edit-image btn btn-custom hvr-underline-from-center" id="{{ $image->id }}" style="margin: 0; padding: 5px 10px">
+                                <i class="fas fa-pencil-alt"></i>
                             </div>
                         </td>
                     </tr>
