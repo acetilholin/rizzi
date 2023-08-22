@@ -15,13 +15,11 @@
             </button>
             <div class="collapse navbar-collapse justify-content-end text-uppercase font-weight-bold" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            EN
+                    <li class="nav-item">
+                        <a href="{{ route($langRoute) }}" class="nav-link">
+                            <i class="fas fa-globe-americas" aria-hidden="true"></i>
+                            {{ $lang }}
                         </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="{{ route('italian') }}">IT</a>
-                        </div>
                     </li>
                     <li class="nav-item">
                         <a href="#home" class="nav-link">Home</a>
@@ -86,7 +84,66 @@
                 </div>
             </div>
         </div>
-        <div class="jumbotron m-0 py-5">
+        <div class="jumbotron">
+            <div class="row justify-content-center">
+                <div class="col-sm-12 col-md-2">
+                    <div class="os-animation" data-animation="fadeInLeft">
+                        <div class="feature">
+                            <span class="fa-layers fa-3x">
+                                <i class="fas fa-skiing text-custom"></i>
+                            </span>
+                            <h3>300 m</h3>
+                            <p>from Ski Area Catinaccio</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-2">
+                    <div class="os-animation" data-animation="fadeInUp">
+                        <div class="feature">
+                            <span class="fa-layers fa-3x">
+                                <i class="fas fa-tram text-custom"></i>
+                            </span>
+                            <h3>5 min</h3>
+                            <p>from Ski Lift Buffure, which is part of Sellaronda circuit</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-2">
+                    <div class="os-animation" data-animation="fadeInUp">
+                        <div class="feature">
+                            <span class="fa-layers fa-3x">
+                                <i class="fas fa-bus-alt text-custom"></i>
+                            </span>
+                            <h3>10 m</h3>
+                            <p>from Ski Bus stop</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-2">
+                    <div class="os-animation" data-animation="fadeInUp">
+                        <div class="feature">
+                            <span class="fa-layers fa-3x">
+                               <i class="fas fa-skiing-nordic text-custom"></i>
+                            </span>
+                            <h3>5 min</h3>
+                            <p>from the cross-country track</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-2">
+                    <div class="os-animation" data-animation="fadeInRight">
+                        <div class="feature">
+                            <span class="fa-layers fa-3x">
+                               <i class="fas fa-mountain text-custom"></i>
+                            </span>
+                            <h3>2000 AMSL</h3>
+                            <p>you can find our Rifuggio Bellavista</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="m-0 py-5">
             <div class="container">
                 <div class="row text-center">
                     <div class="filter mx-auto os-animation" data-animation="fadeInUp" >
@@ -204,10 +261,11 @@
                     </div>
                 </div>
             </div>
-            <div class="copyright pt-5 pb-4">
-                &copy; Hotel Rizzi 2020 / VAT ID IT01729970226
-            </div>
         </footer>
+        <div class="copyright pt-5 pb-4">
+            <x-logos></x-logos>
+            <small class="py-3">&copy; Hotel Rizzi 2020 / VAT ID IT01729970226</small>
+        </div>
     </div>
     <a class="toTop hvr-icon-up" href="#home">
         <i class="fas fa-arrow-circle-up hvr-icon"></i>

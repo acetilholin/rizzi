@@ -5,7 +5,8 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="keywords" content="Hotel Rizzi">
+    <meta name="keywords" content="Albergo Rizzi">
+    <meta name="keywords" content="Hotel Rizzi Pera di Fassa">
     <meta name="author" content="Gregor Kosmina, kosmina.gregor@gmail.com">
     <meta name="description" content="">
 
@@ -38,6 +39,7 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('css/owl.carousel.min.css')}}">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/owl.theme.default.min.css')}}">
     <link rel="stylesheet" type="text/css" href="{{ asset('/css/waypoints.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('/css/cookies.css') }}">
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
@@ -59,6 +61,9 @@
 <script src="{!! asset('js/owl.carousel.min.js') !!}"></script>
 <script src="{!! asset('js/validator.js') !!}"></script>
 <script src="{!! asset('js/waypoints.js') !!}"></script>
+
+<!-- Cookies JS -->
+<script src="https://cdn.jsdelivr.net/npm/js-cookie@beta/dist/js.cookie.min.js"></script>N
 
 <!-- Isotope -->
 <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>

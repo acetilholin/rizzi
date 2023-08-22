@@ -15,13 +15,11 @@
             </button>
             <div class="collapse navbar-collapse justify-content-end text-uppercase font-weight-bold" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" style="padding-bottom: 0!important;" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            IT
+                    <li class="nav-item">
+                        <a href="{{ route($langRoute) }}" class="lang-link nav-link">
+                            <i class="fas fa-globe-americas" aria-hidden="true"></i>
+                            {{ $lang }}
                         </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="{{ route('english') }}">ENG</a>
-                        </div>
                     </li>
                     <li class="nav-item">
                         <a href="#home" class="nav-link">Casa</a>
@@ -88,11 +86,70 @@
                 </div>
             </div>
         </div>
-        <div class="jumbotron m-0 py-5">
-            <div class="container">
-                <div class="row text-center">
-                    <div class="filter mx-auto os-animation" data-animation="fadeInUp" >
-                        <ul id="filters">
+        <div class="jumbotron">
+            <div class="row justify-content-center">
+                <div class="col-sm-12 col-md-2">
+                    <div class="os-animation" data-animation="fadeInLeft">
+                        <div class="feature">
+                            <span class="fa-layers fa-3x">
+                                <i class="fas fa-skiing text-custom"></i>
+                            </span>
+                            <h3>300 m</h3>
+                            <p>dall'impianto di Ski Area Catinaccio</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-2">
+                    <div class="os-animation" data-animation="fadeInUp">
+                        <div class="feature">
+                            <span class="fa-layers fa-3x">
+                                <i class="fas fa-tram text-custom"></i>
+                            </span>
+                            <h3>5 min</h3>
+                            <p>dall'impianto di Ski Area Buffure, che si collega al Sellaronda</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-2">
+                    <div class="os-animation" data-animation="fadeInUp">
+                        <div class="feature">
+                            <span class="fa-layers fa-3x">
+                                <i class="fas fa-bus-alt text-custom"></i>
+                            </span>
+                            <h3>10 m</h3>
+                            <p>dalla fermata dello Skibus nella nostra piazza</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-2">
+                    <div class="os-animation" data-animation="fadeInUp">
+                        <div class="feature">
+                            <span class="fa-layers fa-3x">
+                               <i class="fas fa-skiing-nordic text-custom"></i>
+                            </span>
+                            <h3>5 min</h3>
+                            <p>dalla pista di fondo</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-2">
+                    <div class="os-animation" data-animation="fadeInRight">
+                        <div class="feature">
+                            <span class="fa-layers fa-3x">
+                               <i class="fas fa-mountain text-custom"></i>
+                            </span>
+                            <h3>2000 s.l.m.m.</h3>
+                            <p>si trova il nostro rifugio Bellavista dove ottieni uno sconto extra</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <div class="m-0 py-5">
+                <div class="container">
+                    <div class="row text-center">
+                        <div class="filter mx-auto os-animation" data-animation="fadeInUp" >
+                            <ul id="filters">
                             <li><a href="#" data-filter="*" class="current hvr-underline-from-center">Tutte</a></li>
                             <li><a href="#" class="hvr-underline-from-center" data-filter=".hotel">Hotel</a></li>
                             <li><a href="#" class="hvr-underline-from-center" data-filter=".rooms">Camere</a></li>
@@ -105,7 +162,7 @@
                             @foreach($images as $image)
                                 <li onclick="" class="{!! $image->category !!} col-xs-6 col-sm-4 col-md-3 col-lg-3">
                                     <div class="item">
-                                        <img src="{{ $image->path }}">
+                                        <img src="{{ $image->path }}" alt="image">
                                         <div class="icons">
                                             <a href="{{ $image->path }}" class="openButton" data-fancybox="images" data-caption="{!! $image->caption_it !!}">
                                                 <i class="fa fa-search"></i>
@@ -206,10 +263,11 @@
                     </div>
                 </div>
             </div>
-            <div class="copyright pt-5 pb-4">
-                &copy; Hotel Rizzi 2020 / VAT ID IT01729970226
-            </div>
         </footer>
+        <div class="copyright pt-5 pb-4">
+            <x-logos></x-logos>
+            <small class="py-3">&copy; Hotel Rizzi 2020 / VAT ID IT01729970226</small>
+        </div>
     </div>
     <a class="toTop hvr-icon-up" href="#home">
         <i class="fas fa-arrow-circle-up hvr-icon"></i>
@@ -217,6 +275,7 @@
     <a class="icon hvr-icon-shrink" href="https://www.facebook.com/Hotel-Rizzi-246131208760487" target="_blank">
         <i class="fab fa-facebook-f hvr-icon"></i>
     </a>
+    <x-cookies></x-cookies>
     <!-- Modal -->
     <x-offer></x-offer>
 

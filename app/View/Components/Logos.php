@@ -4,7 +4,7 @@ namespace App\View\Components;
 
 use Illuminate\View\Component;
 
-class UpdateImage extends Component
+class Logos extends Component
 {
     /**
      * Create a new component instance.
@@ -23,6 +23,6 @@ class UpdateImage extends Component
      */
     public function render()
     {
-        return view('components.update-image');
+        return view('components.logos');
     }
 }

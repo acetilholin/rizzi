@@ -6,7 +6,7 @@
             </div>
             <div class="modal-body">
                 <div class="text-center">
-                    <img class="img-thumbnail" src="{{ asset('img/custom-fixed/cover.jpg') }}">
+                    <img class="img-thumbnail" src="{{ asset('img/custom-fixed/cover.jpg') }}" alt="changeImage">
                 </div>
                 <form method="POST" enctype="multipart/form-data" action="{{ url('/image') }}" id="addNew">
                    <div class="mt-4">

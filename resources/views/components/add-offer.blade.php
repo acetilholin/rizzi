@@ -33,7 +33,7 @@
                             <div class="row">
                                 <div class="form-group col-12 col-padding">
                                     <label for="subtitle">{{ trans('offers.description') }}</label>
-                                    <textarea class="form-control editor" placeholder="Inserisci descrizione" id="subtitle" name="subtitle" rows="6" required></textarea>
+                                    <textarea class="form-control editor" placeholder="Inserisci descrizione" id="subtitle" name="subtitle" rows="6"></textarea>
                                 </div>
                             </div>
                             <div class="row justify-content-center">

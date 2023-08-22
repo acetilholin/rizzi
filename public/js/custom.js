@@ -2,6 +2,15 @@ $(window).on('load', function () {
     $('.loader .inner').fadeOut(250, function () {
         $('nav').removeClass('opacity');
         $('.loader').fadeOut(400);
+        setTimeout(function () {
+            if (!Cookies.get('cookieConsent')) {
+                $('.cookie-consent').addClass('cookies-show');
+                $('#agreeOnCookies').on('click', function () {
+                    $('.cookie-consent').removeClass('cookies-show');
+                    Cookies.set('cookieConsent', 'true', {expires: 365})
+                });
+            }
+        }, 1000)
     });
     $('.items').isotope({
         filter: '*',

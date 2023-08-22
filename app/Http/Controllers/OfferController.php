@@ -44,8 +44,8 @@ class OfferController extends Controller
     public function store(Request $request)
     {
         $title = $request->title;
-        $date_from = $request->from;
-        $date_to = $request->to;
+        $date_from = $request->date_from;
+        $date_to = $request->date_to;
         $subtitle = $request->subtitle;
         $priceMP = $request->price_mp;
         $pricePC = $request->price_pc;
@@ -55,6 +55,7 @@ class OfferController extends Controller
 
         $date_from = Carbon::parse($date_from)->format('Y-m-d');
         $date_to = Carbon::parse($date_to)->format('Y-m-d');
+
 
         Offer::create([
             'title' => $title,
