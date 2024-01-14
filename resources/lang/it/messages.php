@@ -17,10 +17,10 @@ return [
     'city' => 'Città',
     'time' => 'Ora',
     'msg' => 'Messaggio',
-    '1-it' => 'Signor',
-    '2-it' => 'Signora',
-    '3-it' => 'Famiglia',
-    '1-en' => 'Sir',
-    '2-en' => 'Madam',
-    '3-en' => 'Family'
+    '0-it' => 'Signor',
+    '1-it' => 'Signora',
+    '2-it' => 'Famiglia',
+    '0-en' => 'Sir',
+    '1-en' => 'Madam',
+    '2-en' => 'Family'
 ];

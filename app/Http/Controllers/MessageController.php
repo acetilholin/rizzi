@@ -28,7 +28,7 @@ class MessageController extends Controller
             return response()->json(['error' => $validator->errors()->all()], 401);
         } else {
             $userHelper = new UserHelper();
-            $email = $request->input('email');
+            $emailSender = $request->input('email');
             $fullname = $request->input('fullname');
             $message = $request->input('message');
             $hotel = env('EMAIL_HOTEL');
@@ -36,7 +36,7 @@ class MessageController extends Controller
 
             $user = User::where('email', $hotel)->first();
 
-            $user->notify(new Message($email, $fullname, $message, $geoData['country'], $geoData['city']));
+            $user->notify(new Message($emailSender, $fullname, $message, $geoData['country'], $geoData['city']));
 
             $response = url()->current() === env('APP_URL').'/en' ? trans('messages.sent') : trans('messages.sentIT');
 
@@ -51,7 +51,7 @@ class MessageController extends Controller
     {
         $salutation = $request->salutation;
         $fullname = $request->fullname;
-        $email = $request->email;
+        $emailSender = $request->email;
         $adults = $request->adults;
         $kids = $request->kids;
         $board = $request->board ?: '/';
@@ -60,10 +60,10 @@ class MessageController extends Controller
 
         if (url()->current() === env('APP_URL').'/en') {
             $response = trans('messages.sent');
-            $salutation = trans($salutation.'-en');
+            $salutation = trans('messages.'.$salutation.'-en');
         } else {
             $response = trans('messages.sentIT');
-            $salutation = trans($salutation.'-it');
+            $salutation = trans('messages.'.$salutation.'-it');
         }
 
         $arrival = date("d.m.Y", strtotime($arrival));
@@ -72,7 +72,7 @@ class MessageController extends Controller
         $hotel = env('EMAIL_HOTEL');
         $user = User::where('email', $hotel)->first();
 
-        $user->notify(new Inquiry($salutation, $fullname, $email, $adults, $kids, $board, $arrival, $departure));
+        $user->notify(new Inquiry($salutation, $fullname, $emailSender, $adults, $kids, $board, $arrival, $departure));
 
         return [
             'resp' => $response,

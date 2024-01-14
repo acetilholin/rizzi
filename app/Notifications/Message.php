@@ -12,16 +12,16 @@ class Message extends Notification
 {
     use Queueable;
 
-    public $email, $fullname, $message, $country, $city;
+    public $emailSender, $fullname, $message, $country, $city;
 
     /**
      * Create a new notification instance.
      *
      * @return void
      */
-    public function __construct($email, $fullname, $message, $country, $city)
+    public function __construct($emailSender, $fullname, $message, $country, $city)
     {
-        $this->email = $email;
+        $this->emailSender = $emailSender;
         $this->fullname = $fullname;
         $this->message = $message;
         $this->country = $country;
@@ -49,10 +49,10 @@ class Message extends Notification
     {
         $timestamp = date('H:i d-m-Y');
         return (new MailMessage)
-            ->from($this->email)
+            ->from(env('MAIL_FROM_ADDRESS'))
             ->subject(trans('messages.newMessage'))
             ->line(trans('messages.newMessageTitle'))
-            ->line(new HtmlString('<b>'.trans('messages.email').'</b>: '.$this->email))
+            ->line(new HtmlString('<b>'.trans('messages.email').'</b>: '.$this->emailSender))
             ->line(new HtmlString('<b>'.trans('messages.sender').'</b>: '.$this->fullname))
             ->line(new HtmlString('<b>'.trans('messages.state').'</b>: '.$this->country))
             ->line(new HtmlString('<b>'.trans('messages.city').'</b>: '.$this->city))

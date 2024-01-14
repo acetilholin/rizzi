@@ -12,18 +12,18 @@ class Inquiry extends Notification
 {
     use Queueable;
 
-    public $salutation, $fullname, $email, $adults, $kids, $board, $arrival, $departure;
+    public $salutation, $fullname, $emailSender, $adults, $kids, $board, $arrival, $departure;
 
     /**
      * Create a new notification instance.
      *
      * @return void
      */
-    public function __construct($salutation, $fullname, $email, $adults, $kids, $board, $arrival, $departure)
+    public function __construct($salutation, $fullname, $emailSender, $adults, $kids, $board, $arrival, $departure)
     {
         $this->salutation = $salutation;
         $this->fullname = $fullname;
-        $this->email = $email;
+        $this->emailSender = $emailSender;
         $this->adults = $adults;
         $this->kids = $kids;
         $this->board = $board;
@@ -51,11 +51,11 @@ class Inquiry extends Notification
     public function toMail($notifiable)
     {
         return (new MailMessage)
-            ->from($this->email)
+            ->from(env('MAIL_FROM_ADDRESS'))
             ->subject(trans('inquiry.newInquiry'))
             ->line(trans('inquiry.newInquiryTitle') .':')
             ->line(new HtmlString('<b>'.trans('inquiry.person').'</b>: '.$this->salutation.' '.$this->fullname))
-            ->line(new HtmlString('<b>'.trans('inquiry.email').'</b>: '.$this->email))
+            ->line(new HtmlString('<b>'.trans('inquiry.email').'</b>: '.$this->emailSender))
             ->line(new HtmlString('<b>'.trans('inquiry.adults').'</b>: '.$this->adults))
             ->line(new HtmlString('<b>'.trans('inquiry.kids').'</b>: '.$this->kids))
             ->line(new HtmlString('<b>'.trans('inquiry.board').'</b>: '.$this->board))
